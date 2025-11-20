@@ -19,40 +19,32 @@
       </label>
 
       <nav class="nav" aria-label="Primary">
-        <a href="#about">👤 About</a>
-        <a href="#experience">💼 Experience</a>
-        <a href="#projects">🚀 Projects</a>
-        <a href="#skills">🛠️ Skills</a>
-        <a href="#education">🎓 Education</a>
-        <a href="#contact">📧 Contact</a>
+        <a href="#about"> About</a>
+        <a href="#experience"> Experience</a>
+        <a href="#projects"> Projects</a>
+        <a href="#skills"> Skills</a>
+        <a href="#education"> Education</a>
+        <a href="#contact"> Contact</a>
         
         <a href="./Resume- Harsh Tita.pdf" class="nav-resume-btn" download>📄 Resume</a>
       </nav>
     </div>
   </header>
 
-  <section id="hero" class="section hero">
+ <section id="hero" class="section hero">
     <div class="container">
-      <span class="hero-greeting">👋 Hi there, I'm</span>
-      <h1 class="hero-name">Harsh Tita</h1>
+      <span id="typewriter-greeting" class="hero-greeting"></span>
+      
+      <h1 id="typewriter-name" class="hero-name"></h1>
       
       <p class="hero-subtitle">
         Masters in CS @ <strong>Arizona State University</strong> 🎓 <br>
         Building intelligent systems with <strong>LLMs</strong> & <strong>Data Engineering</strong>. <br>
         Previously delivered impact at <strong>ZS Associates</strong>.
       </p>
-
-      <div class="hero-actions">
-        <a href="#projects" class="btn-primary">View My Work</a>
-        <a href="#contact" class="btn-secondary">Contact Me</a>
-      </div>
     </div>
   </section>
 
-  <div class="section-divider">
-    <div class="divider-line"></div>
-    <div class="divider-icon">&lt; / &gt;</div> <div class="divider-line"></div>
-  </div>
 
   <section id="about" class="section">
     <div class="container">
@@ -71,8 +63,24 @@
             With over <span class="highlight">2 years of industry experience</span> (ZS Associates, Techmojo), I have worked extensively on backend pipelines, cloud infrastructure, and optimizing data flow. Currently, I am diving deep into <strong>Large Language Models (LLMs)</strong>, NLP, and distributed systems to solve complex real-world problems.
           </p>
           <p>
-            When I'm not coding, you can find me exploring new tech stacks or catching up on the latest AI research papers 📓.
+            When I'm not coding, you can find me exploring new tech stacks or catching up on the latest AI works.
           </p>
+
+          <div class="about-social">
+          
+          <a href="https://www.linkedin.com/in/harsh-tita" class="social-mini-btn" target="_blank" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+
+          <a href="https://github.com/iamharshtita" class="social-mini-btn" target="_blank" aria-label="GitHub">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+          </a>
+
+          <a href="mailto:harshtita01@gmail.com" class="social-mini-btn" aria-label="Email">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+          </a>
+
+        </div>
         </div>
       </div>
       
@@ -116,11 +124,12 @@
 
         <article class="timeline-item">
           <div class="timeline-bullet"></div>
-          <div class="timeline-body">
+          <div class="timeline-body" style="overflow: visible;"> <div class="certificate-badge">
+              <img src="./images/certificate_moment.jpeg" alt="Receiving certificate from scientist" loading="lazy">
+            </div>
             <h3> 💼 Summer Research Intern</h3>
-            <h5> 📌 NRSC, ISRO (Indian Space Research Organization), India</h5>
-            <time class="when"> 📅 Jul' 2022 - Sep' 2022 </time>
-            <p></p>
+            <h5>📌 NRSC, ISRO (Indian Space Research Organization)</h5>
+            <time class="when">📅 Jun' 22 — Aug' 22</time>
           </div>
         </article>
 
@@ -134,6 +143,9 @@
     <div class="divider-icon">&lt; / &gt;</div> <div class="divider-line"></div>
   </div>
 
+
+
+
   <!-- PROJECTS -->
   <section id="projects" class="section">
     <div class="container">
@@ -144,7 +156,7 @@
         <article class="project-card">
           <h3>🌐 Stance Detection using LLMs</h3>
           <p>
-            Stance classification of real-world tweets using state-of-the-art LLMs like Phi-3, Mistral (7B), and Llama 3.1. Focuses on fine-tuning and comparative analysis of model performance.
+            Stance classification of real-world tweets using state-of-the-art LLMs like Phi-3, Mistral (7B), and Llama 3.1 (8B). Focuses on fine-tuning and comparative analysis of model performance.
           </p>
           
           <div class="project-tech">
@@ -247,7 +259,7 @@
         
         <article class="education-card">
           <div class="edu-header">
-            <div class="edu-icon">🏫</div> <div class="edu-title">
+            <div class="edu-icon">🎓</div> <div class="edu-title">
               <h3>Arizona State University</h3>
               <span class="edu-date">Expected May 2027 • Tempe, USA</span>
             </div>
@@ -334,9 +346,74 @@
     <div class="container">© <span id="year"></span> Harsh Tita</div>
   </footer>
 
-  <script>
-    // small script to set footer year
-    document.getElementById('year').textContent = new Date().getFullYear();
+ 
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+      
+      /* -----------------------------------------------
+         1. MOBILE MENU AUTO-CLOSE
+      ----------------------------------------------- */
+      // Select the checkbox and all links in the menu
+      const navToggle = document.getElementById('nav-toggle');
+      const navLinks = document.querySelectorAll('.nav a');
+
+      // Add a click event to every link in the menu
+      navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          // When a link is clicked, uncheck the box to close the menu
+          navToggle.checked = false;
+        });
+      });
+
+      /* -----------------------------------------------
+         2. TYPING ANIMATION (Existing Code)
+      ----------------------------------------------- */
+      const greetingText = "👋 Hi there, I'm";
+      const nameText = "Harsh Tita";
+      
+      const greetingElement = document.getElementById('typewriter-greeting');
+      const nameElement = document.getElementById('typewriter-name');
+      
+      const typeSpeed = 50; 
+      const delayBetweenLines = 500; 
+
+      let charIndex = 0;
+
+      function typeGreeting() {
+        if (greetingElement && charIndex < greetingText.length) {
+          greetingElement.innerHTML = greetingText.substring(0, charIndex + 1) + '<span class="typing-cursor"></span>';
+          charIndex++;
+          setTimeout(typeGreeting, typeSpeed);
+        } else if (greetingElement) {
+          charIndex = 0;
+          setTimeout(typeName, delayBetweenLines);
+        }
+      }
+
+      function typeName() {
+        if (greetingElement) greetingElement.innerHTML = greetingText; // Remove cursor from line 1
+
+        if (nameElement && charIndex < nameText.length) {
+          nameElement.innerHTML = nameText.substring(0, charIndex + 1) + '<span class="typing-cursor"></span>';
+          charIndex++;
+          setTimeout(typeName, typeSpeed + 50);
+        }
+      }
+
+      // Start the animation only if elements exist
+      if (greetingElement && nameElement) {
+        typeGreeting();
+      }
+      
+      /* -----------------------------------------------
+         3. YEAR UPDATE (Footer)
+      ----------------------------------------------- */
+      const yearSpan = document.getElementById('year');
+      if(yearSpan) {
+        yearSpan.textContent = new Date().getFullYear();
+      }
+    });
   </script>
 </body>
 </html>

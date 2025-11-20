@@ -188,6 +188,27 @@ body {
   background: rgba(255,255,255,0.05);
 }
 
+/* ---------- Typing Animation Cursor ---------- */
+.typing-cursor {
+  display: inline-block;
+  width: 3px;
+  height: 1em;
+  background-color: var(--accent);
+  margin-left: 5px;
+  vertical-align: middle;
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* Optional: Ensures the greeting and name keep their space before typing starts */
+.hero-greeting, .hero-name {
+  min-height: 1.2em; 
+}
+
 /* ---------- About Section Refined ---------- */
 .about-grid {
   display: grid;
@@ -232,6 +253,44 @@ body {
   color: var(--text);
   line-height: 1.8;
   margin-bottom: 16px;
+}
+
+/* ---------- About Me Social Icons ---------- */
+.about-social {
+  display: flex;
+  gap: 12px; /* Space between icons */
+  margin-top: 24px; /* Space from the text above */
+  padding-top: 20px;
+  border-top: 1px solid rgba(255,255,255,0.05); /* Subtle separator line */
+}
+
+.social-mini-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 50%; /* Makes them circular */
+  color: var(--muted);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: all 0.2s ease;
+}
+
+/* Icon sizing */
+.social-mini-btn svg {
+  width: 18px;
+  height: 18px;
+  fill: currentColor; /* Uses the text color */
+}
+
+/* Hover Effects */
+.social-mini-btn:hover {
+  transform: translateY(-2px);
+  background: var(--bg);
+  color: var(--accent);
+  border-color: var(--accent);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
 
 .highlight {
@@ -822,5 +881,69 @@ html, body {
   
   .hero-subtitle {
     font-size: 1rem;
+  }
+}
+
+/* ---------- Certificate Photo Badge (Updated) ---------- */
+
+/* 1. The Container */
+.certificate-badge {
+  position: absolute;
+  top: -35px;    /* Moved further up */
+  right: -25px;  /* Moved further right */
+  width: 95px;   /* Increased size (was 70px) */
+  height: 95px;
+  border-radius: 50%;
+  border: 3px solid var(--accent);
+  background: var(--bg-alt);
+  padding: 3px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+  z-index: 10;
+  transition: transform 0.3s ease;
+}
+
+.certificate-badge img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.timeline-body:hover .certificate-badge {
+  transform: scale(1.1) rotate(5deg);
+}
+
+/* 2. CRITICAL FIX: Push text away so it doesn't overlap */
+/* This targets the headers inside ANY timeline body that has a badge */
+.timeline-body:has(.certificate-badge) h3,
+.timeline-body:has(.certificate-badge) h5 {
+  padding-right: 70px; /* Forces text to wrap before hitting the badge */
+  box-sizing: border-box;
+}
+
+/* --- Mobile Adjustments --- */
+@media (max-width: 768px) {
+  .certificate-badge {
+    position: relative; /* No longer floating */
+    top: auto;
+    right: auto;
+    margin: 0 auto 20px auto; /* Center it and add SPACE below it */
+    width: 110px; /* Even bigger on mobile */
+    height: 110px;
+    left: 0; /* Reset any positioning */
+  }
+  
+  /* Reset the text padding on mobile since image is now on top */
+  .timeline-body:has(.certificate-badge) h3,
+  .timeline-body:has(.certificate-badge) h5 {
+    padding-right: 0;
+    text-align: center;
+  }
+
+  /* Ensure the container handles the layout stacking */
+  .timeline-item:has(.certificate-badge) .timeline-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 }
