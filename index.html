@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Harsh Tita — Portfolio</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <!-- NAVBAR -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">Harsh Tita</div>
+
+      <!-- Mobile menu toggle -->
+      <input id="nav-toggle" class="nav-toggle" type="checkbox" aria-label="Open navigation" />
+      <label for="nav-toggle" class="nav-toggle-label" aria-hidden="true">
+        <span></span>
+      </label>
+
+      <nav class="nav" aria-label="Primary">
+        <a href="#about">👤 About</a>
+        <a href="#experience">💼 Experience</a>
+        <a href="#projects">🚀 Projects</a>
+        <a href="#skills">🛠️ Skills</a>
+        <a href="#education">🎓 Education</a>
+        <a href="#contact">📧 Contact</a>
+        
+        <a href="./Resume- Harsh Tita.pdf" class="nav-resume-btn" download>📄 Resume</a>
+      </nav>
+    </div>
+  </header>
+
+  <section id="hero" class="section hero">
+    <div class="container">
+      <span class="hero-greeting">👋 Hi there, I'm</span>
+      <h1 class="hero-name">Harsh Tita</h1>
+      
+      <p class="hero-subtitle">
+        Masters in CS @ <strong>Arizona State University</strong> 🎓 <br>
+        Building intelligent systems with <strong>LLMs</strong> & <strong>Data Engineering</strong>. <br>
+        Previously delivered impact at <strong>ZS Associates</strong>.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#projects" class="btn-primary">View My Work</a>
+        <a href="#contact" class="btn-secondary">Contact Me</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider">
+    <div class="divider-line"></div>
+    <div class="divider-icon">&lt; / &gt;</div> <div class="divider-line"></div>
+  </div>
+
+  <section id="about" class="section">
+    <div class="container">
+      <h2>About Me</h2>
+
+      <div class="about-grid">
+        <div class="about-img">
+          <img src="./images/profile.png" alt="Harsh Tita Profile" />
+        </div>
+        
+        <div class="about-text">
+          <p>
+            I am a <span class="highlight">Master's student in Computer Science</span> at Arizona State University, driven by a curiosity for how large-scale data and intelligent models come together.
+          </p>
+          <p>
+            With over <span class="highlight">2 years of industry experience</span> (ZS Associates, Techmojo), I have worked extensively on backend pipelines, cloud infrastructure, and optimizing data flow. Currently, I am diving deep into <strong>Large Language Models (LLMs)</strong>, NLP, and distributed systems to solve complex real-world problems.
+          </p>
+          <p>
+            When I'm not coding, you can find me exploring new tech stacks or catching up on the latest AI research papers 📓.
+          </p>
+        </div>
+      </div>
+      
+    </div>
+  </section>
+
+  <div class="section-divider">
+    <div class="divider-line"></div>
+    <div class="divider-icon">&lt; / &gt;</div> <div class="divider-line"></div>
+  </div>
+
+ 
+
+  <!-- EXPERIENCE (TIMELINE) -->
+  <section id="experience" class="section">
+    <div class="container">
+      <h2>Work Experience</h2>
+
+      <div class="timeline">
+
+        <!-- Most recent first -->
+        <article class="timeline-item">
+          <div class="timeline-bullet"></div>
+          <div class="timeline-body">
+            <h3> 💼 Business Technology Solutions Associate</h3>
+            <h5> 📌 ZS Associates, India</h5>
+            <time class="when"> 📅 Nov' 23 — Jun' 25</time>
+            <p></p>
+          </div>
+        </article>
+
+        <article class="timeline-item">
+          <div class="timeline-bullet"></div>
+          <div class="timeline-body">
+            <h3> 💼 Backend Developer</h3>
+            <h5> 📌 Techmojo Solutions, India</h5>
+            <time class="when"> 📅 Jun' 23 - Nov' 23</time>
+            <p></p>
+          </div>
+        </article>
+
+        <article class="timeline-item">
+          <div class="timeline-bullet"></div>
+          <div class="timeline-body">
+            <h3> 💼 Summer Research Intern</h3>
+            <h5> 📌 NRSC, ISRO (Indian Space Research Organization), India</h5>
+            <time class="when"> 📅 Jul' 2022 - Sep' 2022 </time>
+            <p></p>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+
+  <div class="section-divider">
+    <div class="divider-line"></div>
+    <div class="divider-icon">&lt; / &gt;</div> <div class="divider-line"></div>
+  </div>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="section">
+    <div class="container">
+      <h2>Projects</h2>
+
+      <div class="projects-grid">
+        
+        <article class="project-card">
+          <h3>🌐 Stance Detection using LLMs</h3>
+          <p>
+            Stance classification of real-world tweets using state-of-the-art LLMs like Phi-3, Mistral (7B), and Llama 3.1. Focuses on fine-tuning and comparative analysis of model performance.
+          </p>
+          
+          <div class="project-tech">
+            <span>Python</span>
+            <span>PyTorch</span>
+            <span>Hugging Face</span>
+            <span>LLMs</span>
+            <span>NLP</span>
+            <span>Google Colab</span>
+          </div>
+
+          <a href="#" class="btn-link" target="_blank" rel="noopener">In Progress</a>
+        </article>
+
+        <article class="project-card">
+          <h3>💹 Cryptracker</h3>
+          <p>
+            A comprehensive cryptocurrency dashboard where users can view real-time prices, analyze market trends, and track different cryptocurrencies in a single consolidated interface.
+          </p>
+
+          <div class="project-tech">
+            <span>React</span>
+            <span>Node.js</span>
+            <span>REST API</span>
+          </div>
+
+          <a href="https://github.com/iamharshtita/cryptracker" class="btn-link" target="_blank" rel="noopener">View on GitHub</a>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider">
+    <div class="divider-line"></div>
+    <div class="divider-icon">&lt; / &gt;</div> <div class="divider-line"></div>
+  </div>
+
+  <!-- SKILLS -->
+  <section id="skills" class="section">
+    <div class="container">
+      <h2>Skills</h2>
+
+      <div class="skills-grid">
+        <div class="skill-box">
+          <h4>Programming Languages</h4>
+          <ul>
+            <li>Golang</li>
+            <li>Python</li>
+            <li>C/C++</li>
+            <li>Java</li>
+          </ul>
+        </div>
+
+        <div class="skill-box">
+          <h4>AI & ML</h4>
+          <ul>
+            <li>LLM & NLP</li>
+            <li>PyTorch</li>
+            <li>Classification</li>
+            <li>Regression</li>
+          </ul>
+        </div>
+
+        <div class="skill-box">
+          <h4>Data Engineering</h4>
+          <ul>
+            <li>ETL & Spark</li>
+            <li>SQL & PostgreSQL</li>
+            <li>Hadoop & Big Data</li>
+            <li>Data Analysis</li>
+            <li>Pipeline Automation</li>
+          </ul>
+        </div>
+
+        <div class="skill-box">
+          <h4>Tools & Infra</h4>
+          <ul>
+            <li>Git & Docker</li>
+            <li>Linux</li>
+            <li>Hugging Face</li>
+            <li>AWS (S3, EMR, EC2)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider">
+    <div class="divider-line"></div>
+    <div class="divider-icon">&lt; / &gt;</div> <div class="divider-line"></div>
+  </div>
+
+  <!-- EDUCATION -->
+ <section id="education" class="section">
+    <div class="container">
+      <h2>Education</h2>
+      
+      <div class="education-grid">
+        
+        <article class="education-card">
+          <div class="edu-header">
+            <div class="edu-icon">🏫</div> <div class="edu-title">
+              <h3>Arizona State University</h3>
+              <span class="edu-date">Expected May 2027 • Tempe, USA</span>
+            </div>
+          </div>
+          
+          <h4>Master of Science in Computer Science</h4>
+          
+          <div class="course-section">
+            <span class="course-label">Key Coursework</span>
+            <div class="course-tags">
+              <span class="course-tag">Semantic Web Mining</span>
+              <span class="course-tag">Distributed Database Systems</span>
+              <span class="course-tag">Info Assurance & Security</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="education-card">
+          <div class="edu-header">
+            <div class="edu-icon">🎓</div>
+            <div class="edu-title">
+              <h3>Amity University</h3>
+              <span class="edu-date">Aug 2019 - May 2023 • Kolkata, India</span>
+            </div>
+          </div>
+
+          <h4>Bachelor of Technology in CS & Engineering</h4>
+
+          <div class="course-section">
+            <span class="course-label">Key Coursework</span>
+            <div class="course-tags">
+              <span class="course-tag">Data Structures & Algo</span>
+              <span class="course-tag">Pattern Recognition</span>
+              <span class="course-tag">Cloud Computing</span>
+              <span class="course-tag">DBMS</span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider">
+    <div class="divider-line"></div>
+    <div class="divider-icon">&lt; / &gt;</div> <div class="divider-line"></div>
+  </div>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section">
+    <div class="container">
+      
+      <div class="contact-content">
+        <h2>Get In Touch</h2>
+        
+        <p class="contact-text">
+          I am currently looking for full-time opportunities in Software Development and Data Engineering. 
+          Whether you have a question, a project to discuss, or just want to say hi, feel free to reach out!
+        </p>
+
+        <div class="contact-actions">
+          <a href="https://www.linkedin.com/in/harsh-tita-05a79b188/" class="contact-btn linkedin" target="_blank" rel="noopener">
+            <span>🔗</span> LinkedIn
+          </a>
+
+          <a href="https://github.com/iamharshtita" class="contact-btn github" target="_blank" rel="noopener">
+            <span>💻</span> GitHub
+          </a>
+
+          <a href="mailto:harshtita01@gmail.com" class="contact-btn email">
+            <span>✉️</span> Email
+          </a>
+          
+          <a href="./Resume- Harsh Tita.pdf" class="contact-btn resume" download>
+            <span>📄</span> Download Resume
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">© <span id="year"></span> Harsh Tita</div>
+  </footer>
+
+  <script>
+    // small script to set footer year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
