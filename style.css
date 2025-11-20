@@ -719,66 +719,108 @@ body {
 /* ---------- Footer ---------- */
 .site-footer { padding: 18px 0; text-align: center; color: var(--muted); }
 
-/* ---------- Mobile Responsive Fixes (Paste at the very END of CSS) ---------- */
-@media (max-width: 768px) {
+/* ---------- STRICT MOBILE FIXES & MENU LOGIC (Paste at very end of CSS) ---------- */
+
+/* 1. Global Mobile Resets */
+html, body {
+  overflow-x: hidden; /* Prevents the page from sliding left/right */
+  width: 100%;
+  position: relative;
+}
+
+@media (max-width: 900px) {
   
-  /* 1. Layout Adjustments */
+  /* --- LAYOUT FIXES --- */
   body {
-    padding-top: 80px; /* Push content down further so it doesn't hide behind nav */
+    padding-top: 80px; /* Push content down */
   }
   
-  .hero {
-    padding: 40px 0; /* Reduce hero padding slightly for mobile screens */
+  .container {
+    width: 100%;
+    padding: 0 20px;
+    overflow: hidden; /* Stops internal elements from breaking width */
   }
 
-  /* 2. Header & Navigation Logic */
+  /* --- SMALLER PROFILE IMAGE --- */
+  .about-grid {
+    grid-template-columns: 1fr !important; /* Stack vertically */
+    gap: 20px;
+    text-align: center;
+    justify-items: center;
+  }
+
+  .about-img {
+    width: 150px; /* Reduced size (was 220px or 280px) */
+    height: 150px;
+    margin: 0 auto; 
+  }
+  
+  /* Ensure image fits perfectly in the smaller circle */
+  .about-img img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .about-text {
+    width: 100%;
+    padding: 10px;
+    text-align: left;
+  }
+
+  /* --- NAV MENU LOGIC (Restoring the Hamburger) --- */
   .header-inner {
-    justify-content: space-between; /* Pushes Logo to left, Hamburger to right */
+    justify-content: space-between; /* Logo Left, Hamburger Right */
   }
 
+  /* 1. Show the Hamburger Icon */
+  .nav-toggle-label {
+    display: block; 
+    cursor: pointer;
+    padding: 10px; 
+    z-index: 1001;
+  }
+
+  /* 2. Hide the Menu List by default */
   .nav {
-    /* CRITICAL: Hide menu by default on mobile */
     display: none; 
-    
-    /* Styling when it DOES open */
     flex-direction: column;
     position: absolute;
-    top: 100%; /* Pushes it exactly below the header bar */
+    top: 100%; /* Push exactly below header */
     left: 0;
     width: 100%;
     background: var(--bg-alt);
     padding: 20px;
-    box-shadow: 0 15px 30px rgba(0,0,0,0.5);
-    border-bottom: 1px solid rgba(255,255,255,0.05);
-    box-sizing: border-box; /* Ensures padding doesn't widen the box */
+    box-shadow: 0 15px 30px rgba(0,0,0,0.9);
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    box-sizing: border-box;
   }
 
-  /* 3. The Logic to OPEN the menu */
-  /* This says: When checkbox is checked, change .nav from 'display: none' to 'display: flex' */
+  /* 3. THE MAGIC: Show menu when Checkbox is Checked */
   .nav-toggle:checked ~ .nav {
-    display: flex; 
+    display: flex;
   }
 
-  /* 4. Hamburger Menu Icon Styling */
-  .nav-toggle-label {
-    display: block; /* Make hamburger visible */
-    margin-left: auto;
-    cursor: pointer;
-    padding: 10px; /* Larger touch target */
-  }
-
-  /* 5. Mobile Link Styling */
+  /* 4. Style the Links for Mobile */
   .nav a {
     display: block;
-    padding: 15px;
+    width: 100%;
     text-align: center;
+    padding: 15px;
     border-bottom: 1px solid rgba(255,255,255,0.05);
-    width: 100%; /* Full width buttons */
   }
-
+  
   .nav-resume-btn {
-    margin: 20px 0 0 0; /* Space above resume button */
-    width: 100%; /* Full width pill */
-    box-sizing: border-box;
+    margin: 20px 0 0 0;
+    width: 100%;
+    text-align: center;
+  }
+  
+  /* --- HERO SECTION TWEAKS --- */
+  .hero-name {
+    font-size: 2.5rem; /* Smaller text so it doesn't wrap awkwardly */
+  }
+  
+  .hero-subtitle {
+    font-size: 1rem;
   }
 }
