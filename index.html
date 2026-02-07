@@ -133,7 +133,7 @@
           <div class="timeline-bullet"></div>
           <div class="timeline-body">
             <h3> 💼 AI Full Stack Developer (Part-time)</h3>
-            <h5> 📌 ASU AI Cloud Innovation Center (powered by <img src="https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg" alt="AWS" style="height: 16px; vertical-align: middle; margin-left: 4px; filter: brightness(0) invert(1);">)</h5>
+            <h5> 📌 ASU AI Cloud Innovation Center (powered by <img src="https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg" alt="AWS" style="height: 16px; vertical-align: middle; margin-left: 4px;">)</h5>
             <time class="when"> 📅 Jan' 26 — Present</time>
             <p></p>
           </div>
@@ -433,14 +433,21 @@
 
       function updateActiveNav() {
         let current = '';
+        const scrollPosition = window.scrollY + 100;
 
         sections.forEach(section => {
-          const sectionTop = section.getBoundingClientRect().top + window.pageYOffset;
+          const sectionTop = section.offsetTop;
           const sectionHeight = section.clientHeight;
-          if (window.scrollY >= (sectionTop - 200)) {
+
+          if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
             current = section.getAttribute('id');
           }
         });
+
+        // Default to hero if at top
+        if (window.scrollY < 100) {
+          current = 'hero';
+        }
 
         navLinksAll.forEach(link => {
           link.classList.remove('active');
@@ -458,15 +465,15 @@
       ----------------------------------------------- */
       document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
-          e.preventDefault();
           const href = this.getAttribute('href');
           const target = document.querySelector(href);
+
           if (target) {
-            // Get the absolute position from the top of the page
-            const targetPosition = target.getBoundingClientRect().top + window.pageYOffset;
-            window.scrollTo({
-              top: targetPosition - 20,
-              behavior: 'smooth'
+            e.preventDefault();
+            // Simple smooth scroll to the element
+            target.scrollIntoView({
+              behavior: 'smooth',
+              block: 'start'
             });
           }
         });
