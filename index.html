@@ -1,230 +1,473 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Harsh Tita — Portfolio</title>
-  <link rel="stylesheet" href="./style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Harsh Tita | AI Full Stack Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style-new.css">
 </head>
 <body>
-  <!-- SIDEBAR (Fixed Left Panel) -->
-  <aside class="sidebar" id="sidebar">
-    <div class="sidebar-content">
-
-      <!-- Profile Section -->
-      <div class="sidebar-profile">
-        <img src="./images/profile.jpeg" alt="Harsh Tita" class="sidebar-avatar" />
-        <h2 class="sidebar-name">Harsh Tita</h2>
-        <p class="sidebar-title">AI Full Stack Developer</p>
-      </div>
-
-      <!-- Navigation -->
-      <nav class="sidebar-nav" aria-label="Primary">
-        <a href="#hero" class="nav-link">
-          <span class="nav-icon">🏠</span>
-          <span class="nav-text">Home</span>
-        </a>
-        <a href="#about" class="nav-link">
-          <span class="nav-icon">👤</span>
-          <span class="nav-text">About</span>
-        </a>
-        <a href="#experience" class="nav-link">
-          <span class="nav-icon">💼</span>
-          <span class="nav-text">Experience</span>
-        </a>
-        <a href="#projects" class="nav-link">
-          <span class="nav-icon">🚀</span>
-          <span class="nav-text">Projects</span>
-        </a>
-        <a href="#skills" class="nav-link">
-          <span class="nav-icon">⚡</span>
-          <span class="nav-text">Skills</span>
-        </a>
-        <a href="#education" class="nav-link">
-          <span class="nav-icon">🎓</span>
-          <span class="nav-text">Education</span>
-        </a>
-        <a href="#contact" class="nav-link">
-          <span class="nav-icon">✉️</span>
-          <span class="nav-text">Contact</span>
-        </a>
+  <!-- Navigation Header -->
+  <header class="header">
+    <div class="header-content">
+      <div class="logo">HT</div>
+      <nav class="nav">
+        <a href="#hero">Home</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact" class="nav-cta">Contact</a>
       </nav>
-
-      <!-- Social Icons -->
-      <div class="sidebar-social">
-        <a href="https://www.linkedin.com/in/harsh-tita" target="_blank" aria-label="LinkedIn" class="social-icon">
-          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-        </a>
-        <a href="https://github.com/iamharshtita" target="_blank" aria-label="GitHub" class="social-icon">
-          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
-        </a>
-        <a href="mailto:harshtita01@gmail.com" aria-label="Email" class="social-icon">
-          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
-        </a>
-      </div>
-
-      <!-- Resume Download Button -->
-      <a href="./Resume- Harsh Tita.pdf" class="sidebar-resume-btn" download>
-        <span>📄</span> Download Resume
-      </a>
+      <button class="mobile-menu-toggle" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </div>
-  </aside>
+  </header>
 
-  <!-- Mobile Toggle Button (Outside Sidebar) -->
-  <button class="sidebar-toggle" id="sidebar-toggle" aria-label="Toggle navigation">
-    <span></span>
-    <span></span>
-    <span></span>
-  </button>
+  <!-- Hero Section -->
+  <section id="hero" class="hero">
+    <div class="hero-content">
+      <h1 class="hero-title">Harsh Tita</h1>
 
-  <!-- MAIN CONTENT AREA -->
-  <main class="main-content">
+      <div class="hero-badge">MS Computer Science Student @ Arizona State University, Class of 2027</div>
 
- <section id="hero" class="section hero">
-    <div class="container">
-      <span id="typewriter-greeting" class="hero-greeting"></span>
-      
-      <h1 id="typewriter-name" class="hero-name"></h1>
-      
-      <p class="hero-subtitle">
-        Masters in CS @ <strong>Arizona State University</strong> 🎓 <br>
-        Part-time AI Full Stack Developer at <strong>ASU AI Cloud Innovation Center</strong> <br>
-        Specializing in <strong>LLMs</strong>, <strong>Full-Stack AI Applications</strong> & <strong>Data Engineering</strong> <br>
-        Previously at <strong>ZS Associates</strong>
+      <p class="hero-lead">
+        Building intelligent systems with LLMs and agentic AI at the intersection
+        of machine learning and cloud infrastructure
       </p>
-    </div>
-  </section>
 
+      <div class="hero-journey">
+        <div class="journey-item current">
+          <div class="journey-marker"></div>
+          <div class="journey-content">
+            <div class="journey-meta">Now</div>
+            <div class="journey-role">AI Full Stack Developer</div>
+            <div class="journey-company">ASU AI Cloud Innovation Center × AWS</div>
+          </div>
+        </div>
 
-  <section id="about" class="section">
-    <div class="container">
-      <h2>About Me</h2>
+        <div class="journey-item">
+          <div class="journey-marker"></div>
+          <div class="journey-content">
+            <div class="journey-meta">Summer 2026</div>
+            <div class="journey-role">AI Engineer Intern</div>
+            <div class="journey-company">T-Mobile • Built agentic prediction systems</div>
+          </div>
+        </div>
 
-      <div class="about-content">
-        <p>
-          I am a <span class="highlight">Master's student in Computer Science</span> at Arizona State University, driven by a curiosity for how large-scale data and intelligent models come together.
-        </p>
-        <p>
-          With over <span class="highlight">2 years of industry experience</span> (ZS Associates, Techmojo), I have worked extensively on backend pipelines, 
-          cloud infrastructure, and optimizing data flow. 
-          Currently, I am diving deep into <strong>Large Language Models</strong>, NLP, and distributed systems to solve complex real-world problems.
-        </p>
-        <p>
-          When I'm not coding, you can find me exploring new tech stacks or catching up on the latest AI works.
-        </p>
+        <div class="journey-item">
+          <div class="journey-marker"></div>
+          <div class="journey-content">
+            <div class="journey-meta">2023-2025</div>
+            <div class="journey-role">Software Engineer</div>
+            <div class="journey-company">ZS Associates • Backend & data pipelines at scale</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-actions">
+        <a href="#experience" class="btn btn-primary">View Full Experience</a>
+        <a href="./Resume- Harsh Tita.pdf" class="btn btn-secondary" download>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+            <polyline points="7 10 12 15 17 10"></polyline>
+            <line x1="12" y1="15" x2="12" y2="3"></line>
+          </svg>
+          Resume
+        </a>
+        <a href="https://github.com/iamharshtita" target="_blank" class="btn btn-ghost">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+          </svg>
+          GitHub
+        </a>
+        <a href="https://www.linkedin.com/in/harsh-tita" target="_blank" class="btn btn-ghost">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+          </svg>
+          LinkedIn
+        </a>
       </div>
     </div>
   </section>
 
-  <div class="section-divider">
-    <div class="divider-line"></div>
-    <div class="divider-icon">&lt; / &gt;</div> <div class="divider-line"></div>
-  </div>
+  <!-- About Section -->
+  <section id="about" class="section">
+    <div class="container-wide">
+      <div class="about-grid">
+        <div class="about-card highlight-card">
+          <div class="card-icon">💡</div>
+          <h3>What I Do</h3>
+          <p>I build AI-powered applications using LLMs, design agentic prediction systems, and create scalable cloud solutions for enterprise challenges.</p>
+        </div>
 
- 
+        <div class="about-card">
+          <div class="card-icon">🎓</div>
+          <h3>Education</h3>
+          <p><strong>MS in Computer Science</strong><br>Arizona State University<br>Focus: AI, NLP, Distributed Systems</p>
+        </div>
 
-  <!-- EXPERIENCE (TIMELINE) -->
+        <div class="about-card">
+          <div class="card-icon">🏢</div>
+          <h3>Recent Experience</h3>
+          <p><strong>AI Engineer Intern at T-Mobile</strong><br>Built agentic prediction systems using AWS and vector stores for portfolio management</p>
+        </div>
+
+        <div class="about-card highlight-card">
+          <div class="card-icon">🚀</div>
+          <h3>Industry Background</h3>
+          <p><strong>2.5+ years of experience</strong><br>ZS Associates, ASU AI Cloud Innovation Center<br>Backend, cloud infrastructure & data engineering</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience Section -->
+  <!--
+    FORMATTING STANDARDS:
+    - Company format: Company Name — City, State/Country
+    - State abbreviations: Use 2-letter codes (AZ, TX, etc.)
+    - Date format: "Month Year — Present" for current roles, "Month Year" for ended roles
+    - Separator: Use em dash (—) between company and location
+  -->
   <section id="experience" class="section">
-    <div class="container">
-      <h2>Work Experience</h2>
+    <div class="container-wide">
+      <div class="section-header">
+        <h2 class="section-title">Work Experience</h2>
+        <p class="section-subtitle">Building AI systems and data infrastructure at scale</p>
+      </div>
 
       <div class="timeline">
-
-        <!-- Most recent first -->
-        <article class="timeline-item">
-          <div class="timeline-bullet"></div>
-          <div class="timeline-body">
-            <h3> 💼 AI Full Stack Developer (Part-time)</h3>
-            <h5> 📌 ASU AI Cloud Innovation Center (powered by <img src="https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg" alt="AWS" style="height: 16px; vertical-align: middle; margin-left: 4px;">)</h5>
-            <time class="when"> 📅 Jan' 26 — Present</time>
-            <p></p>
-          </div>
-        </article>
-
-        <article class="timeline-item">
-          <div class="timeline-bullet"></div>
-          <div class="timeline-body">
-            <h3> 💼 Software Engineer</h3>
-            <h5> 📌 ZS Associates, India</h5>
-            <time class="when"> 📅 Nov' 23 — Jun' 25</time>
-            <p></p>
-          </div>
-        </article>
-
-        <article class="timeline-item">
-          <div class="timeline-bullet"></div>
-          <div class="timeline-body">
-            <h3> 💼 Backend Developer</h3>
-            <h5> 📌 Techmojo Solutions, India</h5>
-            <time class="when"> 📅 Jun' 23 - Nov' 23</time>
-            <p></p>
-          </div>
-        </article>
-
-        <article class="timeline-item">
-          <div class="timeline-bullet"></div>
-          <div class="timeline-body" style="overflow: visible;"> <div class="certificate-badge">
-              <img src="./images/certificate_moment.jpeg" alt="Receiving certificate from scientist" loading="lazy">
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <div class="timeline-date">January 2026 — Present</div>
+            <h3 class="timeline-title">AI Full Stack Developer (Part-time)</h3>
+            <div class="timeline-company">
+              <img src="./images/cic.png" alt="ASU AI Cloud Innovation Center" class="company-logo">
+              ASU AI Cloud Innovation Center — Tempe, AZ (powered by AWS)
             </div>
-            <h3> 💼 Summer Research Intern</h3>
-            <h5>📌 NRSC, ISRO (Indian Space Research Organization)</h5>
-            <time class="when">📅 Jun' 22 — Aug' 22</time>
+            <p class="timeline-description">
+              Developing cloud-native AI applications using AWS services. Building scalable solutions
+              for machine learning deployment and data processing pipelines.
+            </p>
+            <div class="timeline-skills">
+              <span>AWS</span>
+              <span>AI/ML</span>
+              <span>Cloud Architecture</span>
+              <span>Python</span>
+            </div>
           </div>
-        </article>
+        </div>
 
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <div class="timeline-date">May 2026 — August 2026</div>
+            <h3 class="timeline-title">AI Engineer Intern</h3>
+            <div class="timeline-company">
+              <img src="./images/tmobile-logo.png" alt="T-Mobile" class="company-logo">
+              T-Mobile USA, Inc. — Frisco, TX
+            </div>
+            <p class="timeline-description">
+              Collaborated with the portfolio management team to build an agentic prediction system leveraging
+              AWS cloud services and vector stores. Developed AI-driven solutions for predictive analytics
+              and automated decision-making workflows.
+            </p>
+            <div class="timeline-skills">
+              <span>AWS</span>
+              <span>Vector Stores</span>
+              <span>Agentic AI</span>
+              <span>Prediction Systems</span>
+              <span>Python</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <div class="timeline-date">November 2023 — June 2025</div>
+            <h3 class="timeline-title">Software Engineer</h3>
+            <div class="timeline-company">
+              <img src="./images/zs-logo.png" alt="ZS Associates" class="company-logo">
+              ZS Associates — Pune, India
+            </div>
+            <p class="timeline-description">
+              Developed backend systems and data pipelines for enterprise clients. Optimized data flow,
+              implemented cloud infrastructure solutions, and worked on large-scale data processing.
+            </p>
+            <div class="timeline-skills">
+              <span>Backend Development</span>
+              <span>Data Pipelines</span>
+              <span>Cloud Infrastructure</span>
+              <span>Python</span>
+              <span>SQL</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <div class="timeline-date">June 2023 — November 2023</div>
+            <h3 class="timeline-title">Backend Developer</h3>
+            <div class="timeline-company">
+              <img src="./images/techmojo-logo.png" alt="Techmojo Solutions" class="company-logo">
+              Techmojo Solutions — Hyderabad, India
+            </div>
+            <p class="timeline-description">
+              Built and maintained backend services, API development, and database optimization.
+              Focused on creating scalable and efficient server-side applications.
+            </p>
+            <div class="timeline-skills">
+              <span>Backend APIs</span>
+              <span>Database Design</span>
+              <span>Golang</span>
+              <span>REST</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-marker special"></div>
+          <div class="timeline-content">
+            <div class="timeline-date">June 2022 — August 2022</div>
+            <h3 class="timeline-title">Summer Research Intern</h3>
+            <div class="timeline-company">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/b/bd/Indian_Space_Research_Organisation_Logo.svg" alt="ISRO" class="company-logo">
+              NRSC, ISRO — Kolkata, India
+            </div>
+            <div class="timeline-image">
+              <img src="./images/certificate_moment.jpeg" alt="ISRO Certificate Moment" loading="lazy">
+            </div>
+            <p class="timeline-description">
+              Research internship at India's space agency focusing on geospatial data analysis
+              and satellite image processing.
+            </p>
+            <div class="timeline-skills">
+              <span>Research</span>
+              <span>Geospatial Analysis</span>
+              <span>Python</span>
+              <span>Data Analysis</span>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
-
 
   <div class="section-divider">
     <div class="divider-line"></div>
     <div class="divider-icon">&lt; / &gt;</div> <div class="divider-line"></div>
   </div>
 
-
-
-
-  <!-- PROJECTS -->
-  <section id="projects" class="section">
-    <div class="container">
-      <h2>Projects</h2>
+  <!-- Projects Section -->
+  <section id="projects" class="section section-dark">
+    <div class="container-wide">
+      <div class="section-header">
+        <h2 class="section-title">Featured Projects</h2>
+        <p class="section-subtitle">Real-world applications built with AI, data engineering, and full-stack technologies</p>
+      </div>
 
       <div class="projects-grid">
-        
-        <article class="project-card">
-          <h3>🌐 Stance Detection using LLMs</h3>
-          <p>
-            Stance classification of real-world tweets using state-of-the-art LLMs like Phi-3, Mistral (7B), and Llama 3.1 (8B). Focuses on fine-tuning and comparative analysis of model performance.
-          </p>
-          
-          <div class="project-tech">
-            <span>Python</span>
-            <span>PyTorch</span>
-            <span>Hugging Face</span>
-            <span>LLMs</span>
-            <span>NLP</span>
-            <span>Google Colab</span>
+        <!-- Project 1: Resume Matcher -->
+        <article class="project-card featured">
+          <div class="project-header">
+            <div class="project-icon">🎯</div>
+            <a href="https://github.com/iamharshtita/resume-job-matching-system" target="_blank" class="project-link">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                <polyline points="15 3 21 3 21 9"></polyline>
+                <line x1="10" y1="14" x2="21" y2="3"></line>
+              </svg>
+            </a>
           </div>
-
-          <a href="#" class="btn-link" target="_blank" rel="noopener">In Progress</a>
+          <h3 class="project-title">Resume-Job Matching System</h3>
+          <p class="project-description">
+            Intelligent system that matches resumes to job descriptions using NLP and machine learning.
+            Built with Python, implements semantic analysis and ranking algorithms.
+          </p>
+          <div class="project-tech">
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">NLP</span>
+            <span class="tech-tag">Machine Learning</span>
+            <span class="tech-tag">Semantic Analysis</span>
+          </div>
+          <div class="project-meta">
+            <span class="meta-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <circle cx="12" cy="12" r="10"></circle>
+              </svg>
+              Python
+            </span>
+            <span class="meta-item">Updated Apr 2026</span>
+          </div>
         </article>
 
+        <!-- Project 2: Adaptive Knowledge Selector -->
         <article class="project-card">
-          <h3>💹 Cryptracker</h3>
-          <p>
-            A comprehensive cryptocurrency dashboard where users can view real-time prices, analyze market trends, and track different cryptocurrencies in a single consolidated interface.
-          </p>
-
-          <div class="project-tech">
-            <span>React</span>
-            <span>Node.js</span>
-            <span>REST API</span>
+          <div class="project-header">
+            <div class="project-icon">🧠</div>
+            <a href="https://github.com/iamharshtita/adaptive-knowledge-selector" target="_blank" class="project-link">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                <polyline points="15 3 21 3 21 9"></polyline>
+                <line x1="10" y1="14" x2="21" y2="3"></line>
+              </svg>
+            </a>
           </div>
-
-          <a href="https://github.com/iamharshtita/cryptracker" class="btn-link" target="_blank" rel="noopener">View on GitHub</a>
+          <h3 class="project-title">Adaptive Knowledge Selector</h3>
+          <p class="project-description">
+            AI system that dynamically selects and retrieves relevant knowledge based on context.
+            Implements advanced retrieval mechanisms for intelligent information processing.
+          </p>
+          <div class="project-tech">
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">AI/ML</span>
+            <span class="tech-tag">RAG</span>
+            <span class="tech-tag">Knowledge Systems</span>
+          </div>
+          <div class="project-meta">
+            <span class="meta-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <circle cx="12" cy="12" r="10"></circle>
+              </svg>
+              Python
+            </span>
+            <span class="meta-item">Updated Apr 2026</span>
+          </div>
         </article>
 
+        <!-- Project 3: Stance Detection LLM -->
+        <article class="project-card">
+          <div class="project-header">
+            <div class="project-icon">🌐</div>
+            <div class="project-badge">In Progress</div>
+          </div>
+          <h3 class="project-title">Stance Detection using LLMs</h3>
+          <p class="project-description">
+            Research project on stance classification of real-world tweets using state-of-the-art LLMs
+            like Phi-3, Mistral 7B, and Llama 3.1 8B. Comparative analysis and fine-tuning.
+          </p>
+          <div class="project-tech">
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">PyTorch</span>
+            <span class="tech-tag">Hugging Face</span>
+            <span class="tech-tag">LLMs</span>
+            <span class="tech-tag">NLP</span>
+          </div>
+          <div class="project-meta">
+            <span class="meta-item">Research Project</span>
+          </div>
+        </article>
+
+        <!-- Project 4: Cryptracker -->
+        <article class="project-card">
+          <div class="project-header">
+            <div class="project-icon">💹</div>
+            <a href="https://github.com/iamharshtita/cryptracker" target="_blank" class="project-link">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                <polyline points="15 3 21 3 21 9"></polyline>
+                <line x1="10" y1="14" x2="21" y2="3"></line>
+              </svg>
+            </a>
+          </div>
+          <h3 class="project-title">Cryptracker</h3>
+          <p class="project-description">
+            Real-time cryptocurrency dashboard with market analysis, price tracking, and trend visualization.
+            Built with React and Node.js, integrates multiple crypto APIs.
+          </p>
+          <div class="project-tech">
+            <span class="tech-tag">React</span>
+            <span class="tech-tag">Node.js</span>
+            <span class="tech-tag">REST API</span>
+            <span class="tech-tag">Real-time Data</span>
+          </div>
+          <div class="project-meta">
+            <span class="meta-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <circle cx="12" cy="12" r="10"></circle>
+              </svg>
+              JavaScript
+            </span>
+            <span class="meta-item">Full Stack</span>
+          </div>
+        </article>
+
+        <!-- Project 5: Restaurant CRUD API -->
+        <article class="project-card">
+          <div class="project-header">
+            <div class="project-icon">🍽️</div>
+            <a href="https://github.com/iamharshtita/restro-crud-api" target="_blank" class="project-link">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                <polyline points="15 3 21 3 21 9"></polyline>
+                <line x1="10" y1="14" x2="21" y2="3"></line>
+              </svg>
+            </a>
+          </div>
+          <h3 class="project-title">Restaurant CRUD API</h3>
+          <p class="project-description">
+            RESTful API for restaurant management system built with Golang.
+            Demonstrates clean architecture, database design, and API development best practices.
+          </p>
+          <div class="project-tech">
+            <span class="tech-tag">Golang</span>
+            <span class="tech-tag">REST API</span>
+            <span class="tech-tag">PostgreSQL</span>
+            <span class="tech-tag">Backend</span>
+          </div>
+          <div class="project-meta">
+            <span class="meta-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <circle cx="12" cy="12" r="10"></circle>
+              </svg>
+              Golang
+            </span>
+            <span class="meta-item">API Design</span>
+          </div>
+        </article>
+
+        <!-- Project 6: AI Sustainable Platform -->
+        <article class="project-card">
+          <div class="project-header">
+            <div class="project-icon">🌱</div>
+            <a href="https://github.com/iamharshtita/AI-Powered-Sustainable-Access-Economy-Platform-InnovationHacks2.0" target="_blank" class="project-link">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                <polyline points="15 3 21 3 21 9"></polyline>
+                <line x1="10" y1="14" x2="21" y2="3"></line>
+              </svg>
+            </a>
+          </div>
+          <h3 class="project-title">AI Sustainable Access Platform</h3>
+          <p class="project-description">
+            Hackathon project: AI-powered platform for sustainable resource sharing and access economy.
+            Won recognition at InnovationHacks 2.0.
+          </p>
+          <div class="project-tech">
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">AI/ML</span>
+            <span class="tech-tag">Sustainability</span>
+            <span class="tech-tag">Hackathon Winner</span>
+          </div>
+          <div class="project-meta">
+            <span class="meta-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+              </svg>
+              1 star
+            </span>
+            <span class="meta-item">Hackathon</span>
+          </div>
+        </article>
       </div>
     </div>
   </section>
@@ -234,301 +477,243 @@
     <div class="divider-icon">&lt; / &gt;</div> <div class="divider-line"></div>
   </div>
 
-  <!-- SKILLS -->
-  <section id="skills" class="section">
-    <div class="container">
-      <h2>Skills</h2>
+  <!-- Skills Section -->
+  <section id="skills" class="section section-dark">
+    <div class="container-wide">
+      <div class="section-header">
+        <h2 class="section-title">Technical Skills</h2>
+        <p class="section-subtitle">Technologies and tools I work with</p>
+      </div>
 
       <div class="skills-grid">
-        <div class="skill-box">
-          <h4>Programming Languages</h4>
-          <ul>
-            <li>Golang</li>
-            <li>Python</li>
-            <li>C/C++</li>
-            <li>Java</li>
-          </ul>
+        <div class="skill-category">
+          <div class="skill-header">
+            <div class="skill-icon">💻</div>
+            <h3>Programming Languages</h3>
+          </div>
+          <div class="skill-items">
+            <div class="skill-item">
+              <div class="skill-name">Python</div>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 90%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-name">Golang</div>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 85%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-name">Java</div>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 75%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-name">C/C++</div>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 70%"></div>
+              </div>
+            </div>
+          </div>
         </div>
 
-        <div class="skill-box">
-          <h4>AI & ML</h4>
-          <ul>
-            <li>LLM & NLP</li>
-            <li>PyTorch</li>
-            <li>Classification</li>
-            <li>Regression</li>
-          </ul>
+        <div class="skill-category">
+          <div class="skill-header">
+            <div class="skill-icon">🤖</div>
+            <h3>AI & Machine Learning</h3>
+          </div>
+          <div class="skill-items">
+            <div class="skill-item">
+              <div class="skill-name">LLMs & NLP</div>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 85%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-name">PyTorch</div>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 80%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-name">Hugging Face</div>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 80%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-name">ML Algorithms</div>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 75%"></div>
+              </div>
+            </div>
+          </div>
         </div>
 
-        <div class="skill-box">
-          <h4>Data Engineering</h4>
-          <ul>
-            <li>ETL & Spark</li>
-            <li>SQL & PostgreSQL</li>
-            <li>Hadoop & Big Data</li>
-            <li>Data Analysis</li>
-            <li>Pipeline Automation</li>
-          </ul>
+        <div class="skill-category">
+          <div class="skill-header">
+            <div class="skill-icon">📊</div>
+            <h3>Data Engineering</h3>
+          </div>
+          <div class="skill-items">
+            <div class="skill-item">
+              <div class="skill-name">ETL & Spark</div>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 85%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-name">SQL & PostgreSQL</div>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 90%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-name">Hadoop & Big Data</div>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 75%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-name">Pipeline Automation</div>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 85%"></div>
+              </div>
+            </div>
+          </div>
         </div>
 
-        <div class="skill-box">
-          <h4>Tools & Infra</h4>
-          <ul>
-            <li>Git & Docker</li>
-            <li>Linux</li>
-            <li>Hugging Face</li>
-            <li>AWS (S3, EMR, EC2)</li>
-          </ul>
+        <div class="skill-category">
+          <div class="skill-header">
+            <div class="skill-icon">☁️</div>
+            <h3>Cloud & DevOps</h3>
+          </div>
+          <div class="skill-items">
+            <div class="skill-item">
+              <div class="skill-name">AWS (S3, EMR, EC2)</div>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 85%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-name">Docker</div>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 80%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-name">Git</div>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 90%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-name">Linux</div>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 85%"></div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <div class="section-divider">
-    <div class="divider-line"></div>
-    <div class="divider-icon">&lt; / &gt;</div> <div class="divider-line"></div>
-  </div>
-
-  <!-- EDUCATION -->
- <section id="education" class="section">
-    <div class="container">
-      <h2>Education</h2>
-      
-      <div class="education-grid">
-        
-        <article class="education-card">
-          <div class="edu-header">
-            <div class="edu-icon">🎓</div> <div class="edu-title">
-              <h3>Arizona State University</h3>
-              <span class="edu-date">Expected May 2027 • Tempe, USA</span>
-            </div>
-          </div>
-          
-          <h4>Master of Science in Computer Science</h4>
-          
-          <div class="course-section">
-            <span class="course-label">Key Coursework</span>
-            <div class="course-tags">
-              <span class="course-tag">Semantic Web Mining</span>
-              <span class="course-tag">Distributed Database Systems</span>
-              <span class="course-tag">Info Assurance & Security</span>
-            </div>
-          </div>
-        </article>
-
-        <article class="education-card">
-          <div class="edu-header">
-            <div class="edu-icon">🎓</div>
-            <div class="edu-title">
-              <h3>Amity University</h3>
-              <span class="edu-date">Aug 2019 - May 2023 • Kolkata, India</span>
-            </div>
-          </div>
-
-          <h4>Bachelor of Technology in CS & Engineering</h4>
-
-          <div class="course-section">
-            <span class="course-label">Key Coursework</span>
-            <div class="course-tags">
-              <span class="course-tag">Data Structures & Algo</span>
-              <span class="course-tag">Pattern Recognition</span>
-              <span class="course-tag">Cloud Computing</span>
-              <span class="course-tag">DBMS</span>
-            </div>
-          </div>
-        </article>
-
-      </div>
-    </div>
-  </section>
-
-  <div class="section-divider">
-    <div class="divider-line"></div>
-    <div class="divider-icon">&lt; / &gt;</div> <div class="divider-line"></div>
-  </div>
-
-  <!-- CONTACT -->
+  <!-- Contact Section -->
   <section id="contact" class="section">
-    <div class="container">
-      
+    <div class="container-narrow">
       <div class="contact-content">
-        <h2>Get In Touch</h2>
-        
+        <h2 class="section-title">Let's Build Something</h2>
         <p class="contact-text">
-          I am currently looking for full-time opportunities in Software Development and Data Engineering. 
-          Whether you have a question, a project to discuss, or just want to say hi, feel free to reach out!
+          I'm actively seeking full-time opportunities in <strong>AI/ML Engineering</strong>,
+          <strong>Software Development</strong>, and <strong>Data Engineering</strong>.
+          Open to roles where I can leverage LLMs, build scalable systems, and solve complex technical challenges.
         </p>
 
-        <div class="contact-actions">
-          <a href="https://www.linkedin.com/in/harsh-tita-05a79b188/" class="contact-btn linkedin" target="_blank" rel="noopener">
-            <span>🔗</span> LinkedIn
+        <div class="contact-grid">
+          <a href="mailto:harshtita01@gmail.com" class="contact-card">
+            <div class="contact-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+            </div>
+            <div class="contact-info">
+              <div class="contact-label">Email</div>
+              <div class="contact-value">harshtita01@gmail.com</div>
+            </div>
           </a>
 
-          <a href="https://github.com/iamharshtita" class="contact-btn github" target="_blank" rel="noopener">
-            <span>💻</span> GitHub
+          <a href="https://www.linkedin.com/in/harsh-tita" target="_blank" class="contact-card">
+            <div class="contact-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+              </svg>
+            </div>
+            <div class="contact-info">
+              <div class="contact-label">LinkedIn</div>
+              <div class="contact-value">harsh-tita</div>
+            </div>
           </a>
 
-          <a href="mailto:harshtita01@gmail.com" class="contact-btn email">
-            <span>✉️</span> Email
+          <a href="https://github.com/iamharshtita" target="_blank" class="contact-card">
+            <div class="contact-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+              </svg>
+            </div>
+            <div class="contact-info">
+              <div class="contact-label">GitHub</div>
+              <div class="contact-value">@iamharshtita</div>
+            </div>
           </a>
-          
-          <a href="./Resume- Harsh Tita.pdf" class="contact-btn resume" download>
-            <span>📄</span> Download Resume
+
+          <a href="./Resume- Harsh Tita.pdf" class="contact-card" download>
+            <div class="contact-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+                <line x1="12" y1="18" x2="12" y2="12"></line>
+                <line x1="9" y1="15" x2="15" y2="15"></line>
+              </svg>
+            </div>
+            <div class="contact-info">
+              <div class="contact-label">Resume</div>
+              <div class="contact-value">Download PDF</div>
+            </div>
           </a>
         </div>
-      </div>
 
+        <div class="cta-box">
+          <p>Ready to discuss opportunities? Let's connect!</p>
+          <a href="mailto:harshtita01@gmail.com" class="btn btn-primary btn-large">Get in Touch</a>
+        </div>
+      </div>
     </div>
   </section>
 
-  <footer class="site-footer">
-    <div class="container">© <span id="year"></span> Harsh Tita</div>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container-wide">
+      <div class="footer-content">
+        <div class="footer-left">
+          <div class="footer-logo">HT</div>
+          <p>Building intelligent systems with AI and data</p>
+        </div>
+        <div class="footer-links">
+          <a href="https://github.com/iamharshtita" target="_blank">GitHub</a>
+          <a href="https://www.linkedin.com/in/harsh-tita" target="_blank">LinkedIn</a>
+          <a href="mailto:harshtita01@gmail.com">Email</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <span id="year"></span> Harsh Tita. Designed for impact.</p>
+      </div>
+    </div>
   </footer>
 
-  </main>
-  <!-- End Main Content Area -->
-
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-
-      /* -----------------------------------------------
-         1. SIDEBAR TOGGLE (Mobile)
-      ----------------------------------------------- */
-      const sidebar = document.getElementById('sidebar');
-      const sidebarToggle = document.getElementById('sidebar-toggle');
-
-      // Create overlay element
-      const overlay = document.createElement('div');
-      overlay.className = 'sidebar-overlay';
-      document.body.appendChild(overlay);
-
-      // Toggle sidebar on mobile
-      if (sidebarToggle) {
-        sidebarToggle.addEventListener('click', function() {
-          sidebar.classList.toggle('active');
-          overlay.classList.toggle('active');
-        });
-
-        // Close sidebar when overlay is clicked
-        overlay.addEventListener('click', function() {
-          sidebar.classList.remove('active');
-          overlay.classList.remove('active');
-        });
-
-        // Close sidebar when nav link is clicked (mobile)
-        const navLinks = document.querySelectorAll('.nav-link');
-        navLinks.forEach(link => {
-          link.addEventListener('click', function() {
-            if (window.innerWidth <= 768) {
-              sidebar.classList.remove('active');
-              overlay.classList.remove('active');
-            }
-          });
-        });
-      }
-
-      /* -----------------------------------------------
-         2. ACTIVE NAV LINK HIGHLIGHTING
-      ----------------------------------------------- */
-      const sections = document.querySelectorAll('.section');
-      const navLinksAll = document.querySelectorAll('.nav-link');
-
-      function updateActiveNav() {
-        let current = '';
-        const scrollPosition = window.scrollY + 100;
-
-        sections.forEach(section => {
-          const sectionTop = section.offsetTop;
-          const sectionHeight = section.clientHeight;
-
-          if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
-            current = section.getAttribute('id');
-          }
-        });
-
-        // Default to hero if at top
-        if (window.scrollY < 100) {
-          current = 'hero';
-        }
-
-        navLinksAll.forEach(link => {
-          link.classList.remove('active');
-          if (link.getAttribute('href') === `#${current}`) {
-            link.classList.add('active');
-          }
-        });
-      }
-
-      window.addEventListener('scroll', updateActiveNav);
-      updateActiveNav(); // Initial call
-
-      /* -----------------------------------------------
-         3. SMOOTH SCROLL WITH OFFSET
-      ----------------------------------------------- */
-      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-          const href = this.getAttribute('href');
-          const target = document.querySelector(href);
-
-          if (target) {
-            e.preventDefault();
-            // Simple smooth scroll to the element
-            target.scrollIntoView({
-              behavior: 'smooth',
-              block: 'start'
-            });
-          }
-        });
-      });
-
-      /* -----------------------------------------------
-         4. TYPING ANIMATION (Existing Code)
-      ----------------------------------------------- */
-      const greetingText = "👋 Hi there, I'm";
-      const nameText = "Harsh Tita";
-      
-      const greetingElement = document.getElementById('typewriter-greeting');
-      const nameElement = document.getElementById('typewriter-name');
-      
-      const typeSpeed = 50; 
-      const delayBetweenLines = 500; 
-
-      let charIndex = 0;
-
-      function typeGreeting() {
-        if (greetingElement && charIndex < greetingText.length) {
-          greetingElement.innerHTML = greetingText.substring(0, charIndex + 1) + '<span class="typing-cursor"></span>';
-          charIndex++;
-          setTimeout(typeGreeting, typeSpeed);
-        } else if (greetingElement) {
-          charIndex = 0;
-          setTimeout(typeName, delayBetweenLines);
-        }
-      }
-
-      function typeName() {
-        if (greetingElement) greetingElement.innerHTML = greetingText; // Remove cursor from line 1
-
-        if (nameElement && charIndex < nameText.length) {
-          nameElement.innerHTML = nameText.substring(0, charIndex + 1) + '<span class="typing-cursor"></span>';
-          charIndex++;
-          setTimeout(typeName, typeSpeed + 50);
-        }
-      }
-
-      // Start the animation only if elements exist
-      if (greetingElement && nameElement) {
-        typeGreeting();
-      }
-      
-      /* -----------------------------------------------
-         5. YEAR UPDATE (Footer)
-      ----------------------------------------------- */
-      const yearSpan = document.getElementById('year');
-      if(yearSpan) {
-        yearSpan.textContent = new Date().getFullYear();
-      }
-    });
-  </script>
+  <script src="./script-new.js"></script>
 </body>
 </html>
