@@ -383,7 +383,42 @@ img {
   background: var(--accent-indigo);
 }
 
-/* Removed stats-bar and terminal - simplified hero section */
+/* Hero Impact Stats */
+.hero-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.5rem;
+  margin-bottom: 3rem;
+  padding: 1.75rem 0;
+  border-top: 1px solid var(--border-light);
+  border-bottom: 1px solid var(--border-light);
+  animation: fadeInUp 0.6s ease-out 0.35s backwards;
+}
+
+.hero-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.hero-stat-value {
+  font-family: var(--font-display);
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  font-weight: 700;
+  line-height: 1;
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero-stat-label {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+  max-width: 150px;
+  line-height: 1.4;
+}
 
 /* Hero Actions */
 .hero-actions {
@@ -784,6 +819,36 @@ img {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
 
+/* Experience Impact Highlight */
+.timeline-impact {
+  display: inline-flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding: 0.6rem 1rem;
+  margin-bottom: 1rem;
+  background: var(--gradient-card);
+  border: 1px solid rgba(99, 102, 241, 0.3);
+  border-radius: var(--radius-md);
+}
+
+.impact-metric {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.05rem;
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  white-space: nowrap;
+}
+
+.impact-desc {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
 .timeline-description {
   color: var(--text-secondary);
   line-height: 1.7;
@@ -890,6 +955,29 @@ img {
   background: var(--gradient-primary);
   border-radius: 4px;
   transition: width 1s ease-out;
+}
+
+/* Grouped Skill Tags */
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.skill-tag {
+  padding: 0.4rem 0.9rem;
+  background: rgba(99, 102, 241, 0.15);
+  color: var(--accent-indigo);
+  border: 1px solid var(--accent-indigo);
+  border-radius: var(--radius-sm);
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: var(--transition-fast);
+}
+
+.skill-tag:hover {
+  background: rgba(99, 102, 241, 0.3);
+  transform: translateY(-2px);
 }
 
 /* ========================================
@@ -1088,6 +1176,16 @@ img {
 
   .hero-journey {
     margin-bottom: 2rem;
+  }
+
+  .hero-stats {
+    gap: 1.5rem 2rem;
+    padding: 1.25rem 0;
+    margin-bottom: 2rem;
+  }
+
+  .hero-stat-value {
+    font-size: 1.75rem;
   }
 
   .journey-item {
