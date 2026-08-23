@@ -1605,13 +1605,19 @@ img {
   }
 
   .hero-stats {
-    gap: 1.5rem 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
     padding: 1.25rem 0;
     margin-bottom: 2rem;
   }
 
   .hero-stat-value {
     font-size: 1.75rem;
+  }
+
+  .hero-stat-label {
+    max-width: none;
   }
 
   .journey-item {
@@ -1628,12 +1634,20 @@ img {
   }
 
   .hero-actions {
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
   }
 
   .hero-actions .btn {
     width: 100%;
     justify-content: center;
+  }
+
+  /* Primary actions span full width; GitHub + LinkedIn pair up */
+  .hero-actions .btn-primary,
+  .hero-actions .btn-secondary {
+    grid-column: 1 / -1;
   }
 
   .section {
@@ -1679,9 +1693,14 @@ img {
     padding: 1.5rem;
   }
 
+  .timeline-company {
+    margin-bottom: 0.5rem;
+  }
+
   .timeline-link {
-    top: 1.5rem;
-    right: 1.5rem;
+    position: static;
+    margin-top: 0;
+    margin-bottom: 1rem;
   }
 
   .contact-grid {
