@@ -255,6 +255,104 @@ document.addEventListener('DOMContentLoaded', function() {
   */
 
   // ========================================
+  // MOMENTS LIGHTBOX (Photo Viewer)
+  // ========================================
+  const lightbox = document.getElementById('lightbox');
+  if (lightbox) {
+    const moments = Array.from(document.querySelectorAll('.moments-grid .moment'));
+    const lbImg = lightbox.querySelector('.lightbox-img');
+    const lbCaption = lightbox.querySelector('.lightbox-caption');
+    const lbCounter = lightbox.querySelector('.lightbox-counter');
+    const btnClose = lightbox.querySelector('.lightbox-close');
+    const btnPrev = lightbox.querySelector('.lightbox-prev');
+    const btnNext = lightbox.querySelector('.lightbox-next');
+
+    const items = moments.map(fig => {
+      const img = fig.querySelector('img');
+      const cap = fig.querySelector('figcaption');
+      return {
+        src: img ? img.getAttribute('src') : '',
+        alt: img ? img.alt : '',
+        caption: cap ? cap.textContent.trim() : ''
+      };
+    });
+
+    let currentIndex = 0;
+    let lastFocused = null;
+
+    function render() {
+      const item = items[currentIndex];
+      lbImg.src = item.src;
+      lbImg.alt = item.alt;
+      lbCaption.textContent = item.caption;
+      lbCounter.textContent = `${currentIndex + 1} / ${items.length}`;
+    }
+
+    function openLightbox(index) {
+      currentIndex = index;
+      render();
+      lightbox.classList.add('open');
+      lightbox.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+      lastFocused = document.activeElement;
+      btnNext.focus();
+    }
+
+    function closeLightbox() {
+      lightbox.classList.remove('open');
+      lightbox.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+      if (lastFocused) lastFocused.focus();
+    }
+
+    function navigate(delta) {
+      currentIndex = (currentIndex + delta + items.length) % items.length;
+      render();
+    }
+
+    moments.forEach((fig, i) => {
+      fig.setAttribute('role', 'button');
+      fig.setAttribute('tabindex', '0');
+      fig.setAttribute('aria-label', 'View photo: ' + items[i].caption);
+      fig.addEventListener('click', () => openLightbox(i));
+      fig.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          openLightbox(i);
+        }
+      });
+    });
+
+    btnClose.addEventListener('click', closeLightbox);
+    btnPrev.addEventListener('click', () => navigate(-1));
+    btnNext.addEventListener('click', () => navigate(1));
+
+    // Click on the dark backdrop (not the image or buttons) closes
+    lightbox.addEventListener('click', (e) => {
+      if (e.target === lightbox || e.target.classList.contains('lightbox-figure')) {
+        closeLightbox();
+      }
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (!lightbox.classList.contains('open')) return;
+      if (e.key === 'Escape') closeLightbox();
+      else if (e.key === 'ArrowLeft') navigate(-1);
+      else if (e.key === 'ArrowRight') navigate(1);
+    });
+
+    // Touch swipe (mobile)
+    let touchStartX = 0;
+    lightbox.addEventListener('touchstart', (e) => {
+      touchStartX = e.changedTouches[0].screenX;
+    }, { passive: true });
+    lightbox.addEventListener('touchend', (e) => {
+      const dx = e.changedTouches[0].screenX - touchStartX;
+      if (Math.abs(dx) > 50) navigate(dx < 0 ? 1 : -1);
+    }, { passive: true });
+  }
+
+  // ========================================
   // CONSOLE EASTER EGG
   // ========================================
   console.log('%c👋 Hello, Recruiter!', 'font-size: 20px; font-weight: bold; color: #00D9FF;');
