@@ -7,7 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./style.css?v=8">
+  <link rel="stylesheet" href="./style.css?v=10">
 </head>
 <body>
   <!-- Navigation Header -->
@@ -683,6 +683,30 @@
         </div>
       </div>
 
+      <!-- Kiro Anniversary Video Feature -->
+      <div class="spotlight video-spotlight">
+        <button class="video-poster" type="button" data-video-open aria-label="Play the Kiro anniversary video featuring Harsh Tita">
+          <img src="./images/kiro-linkedin-video.jpeg" alt="Harsh Tita featured in Kiro's 1-year anniversary video on LinkedIn" loading="lazy">
+          <span class="video-play" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="6 4 20 12 6 20 6 4"></polygon></svg>
+          </span>
+        </button>
+        <div class="spotlight-body">
+          <div class="spotlight-badge">Featured on LinkedIn</div>
+          <p class="spotlight-quote">
+            Kiro featured my story in their 1-year anniversary video, spotlighting how students turn
+            simple ideas into production-ready apps with Kiro.
+          </p>
+          <p class="spotlight-cite">
+            <strong>Harsh Tita</strong>, in Kiro's official anniversary video shared to their 28k+ LinkedIn following.
+          </p>
+          <button class="spotlight-link video-open" type="button" data-video-open>
+            Play the video
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="6 4 20 12 6 20 6 4"></polygon></svg>
+          </button>
+        </div>
+      </div>
+
       <!-- Photo Masonry Gallery -->
       <div class="moments-grid">
         <figure class="moment">
@@ -829,6 +853,16 @@
     </figure>
   </div>
 
-  <script src="./script.js?v=3"></script>
+  <!-- Video Modal (LinkedIn embed) -->
+  <div class="video-modal" id="video-modal" role="dialog" aria-modal="true" aria-label="Kiro anniversary video featuring Harsh Tita" aria-hidden="true">
+    <button class="lightbox-btn video-modal-close" type="button" aria-label="Close video">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+    </button>
+    <div class="video-modal-inner">
+      <iframe class="video-modal-frame" data-src="https://www.linkedin.com/embed/feed/update/urn:li:activity:7485388401094090754" title="Kiro anniversary video featuring Harsh Tita" frameborder="0" allow="autoplay; fullscreen" allowfullscreen loading="lazy"></iframe>
+    </div>
+  </div>
+
+  <script src="./script.js?v=4"></script>
 </body>
 </html>

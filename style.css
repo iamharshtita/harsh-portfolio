@@ -1407,6 +1407,154 @@ img {
 }
 
 /* ========================================
+   VIDEO FEATURE (LinkedIn)
+   ======================================== */
+.video-poster {
+  position: relative;
+  display: block;
+  width: 100%;
+  min-height: 380px;
+  padding: 0;
+  border: none;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  cursor: pointer;
+  background: var(--text-primary);
+}
+
+.video-poster img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.video-poster::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(15, 23, 42, 0);
+  transition: var(--transition-base);
+}
+
+.video-poster:hover::after,
+.video-poster:focus-visible::after {
+  background: rgba(15, 23, 42, 0.25);
+}
+
+.video-play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.9);
+  z-index: 2;
+  width: 74px;
+  height: 74px;
+  border-radius: 50%;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-lg);
+  opacity: 0;
+  transition: var(--transition-base);
+}
+
+.video-poster:hover .video-play,
+.video-poster:focus-visible .video-play {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+/* Touch devices have no hover: keep the play affordance visible */
+@media (hover: none) {
+  .video-play {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+.video-play svg {
+  width: 30px;
+  height: 30px;
+  color: var(--accent-indigo);
+  margin-left: 4px;
+}
+
+.video-open {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  padding: 0;
+}
+
+/* Video Modal */
+.video-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 1.5rem;
+  background: rgba(15, 23, 42, 0.93);
+  backdrop-filter: blur(8px);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity var(--transition-base), visibility var(--transition-base);
+}
+
+.video-modal.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.video-modal-inner {
+  width: min(520px, 94vw);
+  height: min(86vh, 720px);
+  background: #fff;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+  transform: scale(0.96);
+  transition: transform var(--transition-base);
+}
+
+.video-modal.open .video-modal-inner {
+  transform: scale(1);
+}
+
+.video-modal-frame {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+}
+
+.video-modal-close {
+  top: 1.25rem;
+  right: 1.25rem;
+  width: 48px;
+  height: 48px;
+}
+
+.video-modal-close:hover {
+  transform: scale(1.08);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .video-modal,
+  .video-modal-inner,
+  .video-play,
+  .video-poster::after {
+    transition: none;
+  }
+}
+
+/* ========================================
    CONTACT SECTION
    ======================================== */
 

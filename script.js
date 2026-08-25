@@ -353,6 +353,48 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   // ========================================
+  // VIDEO MODAL (LinkedIn embed)
+  // ========================================
+  const videoModal = document.getElementById('video-modal');
+  if (videoModal) {
+    const frame = videoModal.querySelector('.video-modal-frame');
+    const embedSrc = frame.getAttribute('data-src');
+    const closeVideoBtn = videoModal.querySelector('.video-modal-close');
+    let lastFocusedBeforeVideo = null;
+
+    function openVideo() {
+      if (frame.src !== embedSrc) frame.src = embedSrc;
+      videoModal.classList.add('open');
+      videoModal.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+      lastFocusedBeforeVideo = document.activeElement;
+      closeVideoBtn.focus();
+    }
+
+    function closeVideo() {
+      videoModal.classList.remove('open');
+      videoModal.setAttribute('aria-hidden', 'true');
+      frame.src = ''; // stop playback
+      document.body.style.overflow = '';
+      if (lastFocusedBeforeVideo) lastFocusedBeforeVideo.focus();
+    }
+
+    document.querySelectorAll('[data-video-open]').forEach(el => {
+      el.addEventListener('click', openVideo);
+    });
+
+    closeVideoBtn.addEventListener('click', closeVideo);
+
+    videoModal.addEventListener('click', (e) => {
+      if (e.target === videoModal) closeVideo();
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (videoModal.classList.contains('open') && e.key === 'Escape') closeVideo();
+    });
+  }
+
+  // ========================================
   // CONSOLE EASTER EGG
   // ========================================
   console.log('%c👋 Hello, Recruiter!', 'font-size: 20px; font-weight: bold; color: #00D9FF;');
