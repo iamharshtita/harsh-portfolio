@@ -181,6 +181,46 @@ document.addEventListener('DOMContentLoaded', function () {
   if (yearSpan) yearSpan.textContent = new Date().getFullYear();
 
   // ========================================
+  // PHOTO RAIL ARROWS
+  // ========================================
+  const rail = document.querySelector('.rail');
+  const railBtns = document.querySelectorAll('[data-rail]');
+
+  if (rail && railBtns.length) {
+    // Scroll by whole cards, so a photo never lands half out of view.
+    function step() {
+      const card = rail.querySelector('.moment');
+      if (!card) return rail.clientWidth;
+      const gap = parseFloat(getComputedStyle(rail).columnGap || '16') || 16;
+      const per = Math.max(1, Math.floor(rail.clientWidth / (card.offsetWidth + gap)));
+      return (card.offsetWidth + gap) * per;
+    }
+
+    function syncButtons() {
+      // 2px of slack: fractional scroll widths mean scrollLeft rarely hits the
+      // maximum exactly, which would leave the next arrow enabled forever.
+      const max = rail.scrollWidth - rail.clientWidth;
+      railBtns.forEach(btn => {
+        const isNext = btn.dataset.rail === 'next';
+        btn.disabled = isNext ? rail.scrollLeft >= max - 2 : rail.scrollLeft <= 2;
+      });
+    }
+
+    railBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        rail.scrollBy({
+          left: btn.dataset.rail === 'next' ? step() : -step(),
+          behavior: prefersReducedMotion ? 'auto' : 'smooth'
+        });
+      });
+    });
+
+    rail.addEventListener('scroll', syncButtons, { passive: true });
+    window.addEventListener('resize', syncButtons);
+    syncButtons();
+  }
+
+  // ========================================
   // PHOTO LIGHTBOX
   // ========================================
   const lightbox = document.getElementById('lightbox');

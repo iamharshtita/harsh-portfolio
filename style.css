@@ -891,8 +891,47 @@ button {
   border-top: 1px solid var(--rule);
 }
 
-.rail-wrap .minor-label {
+.rail-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
   margin-bottom: 1.5rem;
+}
+
+.rail-nav {
+  display: flex;
+  gap: 0.5rem;
+  flex-shrink: 0;
+}
+
+.rail-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border: 1px solid var(--rule);
+  border-radius: 50%;
+  color: var(--ink-mid);
+  transition: var(--t-fast);
+}
+
+.rail-btn svg {
+  width: 20px;
+  height: 20px;
+}
+
+.rail-btn:hover:not(:disabled) {
+  color: var(--ink);
+  border-color: var(--ink);
+}
+
+/* Dimmed at each end of the track rather than hidden, so the control does
+   not shift position as you scroll. */
+.rail-btn:disabled {
+  opacity: 0.3;
+  cursor: default;
 }
 
 .rail {
