@@ -3,841 +3,604 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Harsh Tita | AI Full Stack Developer</title>
+  <title>Harsh Tita | AI &amp; Cloud Developer</title>
+  <meta name="description" content="Harsh Tita — AI &amp; Cloud Developer. I build agentic AI systems, RAG pipelines, and the cloud infrastructure behind them.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./style.css?v=10">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css?v=12">
 </head>
-<body>
-  <!-- Navigation Header -->
-  <header class="header">
-    <div class="header-content">
-      <div class="logo">HT</div>
-      <nav class="nav">
-        <a href="#hero">Home</a>
-        <a href="#experience">Experience</a>
-        <a href="#projects">Projects</a>
-        <a href="#skills">Skills</a>
-        <a href="#moments">Moments</a>
-        <a href="#contact" class="nav-cta">Contact</a>
-      </nav>
-      <button class="mobile-menu-toggle" aria-label="Toggle menu">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-    </div>
+<body id="top">
+
+  <!-- ============================================
+       HEADER
+       ============================================ -->
+  <header class="site-header">
+    <a class="brand" href="#top">
+      <span class="brand-avatar"><img src="./images/hero-picture.jpeg" alt="" aria-hidden="true"></span>
+      <span class="brand-name">Harsh Tita</span>
+    </a>
+
+    <nav class="site-nav" id="site-nav">
+      <a href="#work"><span aria-hidden="true">+</span> Work</a>
+      <a href="#experience"><span aria-hidden="true">+</span> Experience</a>
+      <a href="#skills"><span aria-hidden="true">+</span> Skills</a>
+      <a href="#contact" class="nav-contact"><span aria-hidden="true">+</span> Get in touch</a>
+    </nav>
+
+    <a class="header-cta" href="#contact"><span aria-hidden="true">+</span> Get in touch</a>
+
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+      <span aria-hidden="true">+</span> <span class="nav-toggle-label">Menu</span>
+    </button>
   </header>
 
-  <!-- Hero Section -->
-  <section id="hero" class="hero">
-    <div class="hero-inner">
-      <div class="hero-content">
-      <h1 class="hero-title">Harsh Tita</h1>
+  <main>
+    <!-- ============================================
+         HERO
+         ============================================ -->
+    <section class="hero">
+      <p class="hero-id reveal">Harsh Tita <span aria-hidden="true">—</span> AI &amp; Cloud Developer</p>
 
-      <div class="hero-badge">MS Computer Science Student @ Arizona State University, Class of 2027</div>
+      <h1 class="hero-statement reveal">Models are<br>the easy part.</h1>
 
-      <p class="hero-lead">
-        Building intelligent systems with LLMs and agentic AI at the intersection
-        of machine learning and cloud infrastructure
-      </p>
+      <div class="hero-mid">
+        <p class="hero-sub reveal">
+          I build <span class="rotator" data-words="agents,pipelines,platforms" aria-live="polite">agents</span>
+          that run in production.
+        </p>
 
-      <div class="hero-journey">
-        <div class="journey-item current">
-          <div class="journey-marker"></div>
-          <div class="journey-content">
-            <div class="journey-meta">Now</div>
-            <div class="journey-role">AI Full Stack Developer</div>
-            <div class="journey-company">ASU AI Cloud Innovation Center × AWS</div>
-          </div>
-        </div>
-
-        <div class="journey-item">
-          <div class="journey-marker"></div>
-          <div class="journey-content">
-            <div class="journey-meta">Summer 2026</div>
-            <div class="journey-role">Associate Engineer Intern, AI</div>
-            <div class="journey-company">T-Mobile • Built agentic prediction systems</div>
-          </div>
-        </div>
-
-        <div class="journey-item">
-          <div class="journey-marker"></div>
-          <div class="journey-content">
-            <div class="journey-meta">2023-2025</div>
-            <div class="journey-role">Software Engineer</div>
-            <div class="journey-company">ZS Associates • Backend & data pipelines at scale</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="hero-stats">
-        <div class="hero-stat">
-          <div class="hero-stat-value">$14M</div>
-          <div class="hero-stat-label">Projected annual savings @ T-Mobile</div>
-        </div>
-        <div class="hero-stat">
-          <div class="hero-stat-value">90%</div>
-          <div class="hero-stat-label">AI infra cost reduction</div>
-        </div>
-        <div class="hero-stat">
-          <div class="hero-stat-value">80%</div>
-          <div class="hero-stat-label">LLM stance-detection accuracy</div>
-        </div>
-        <div class="hero-stat">
-          <div class="hero-stat-value">4.0</div>
-          <div class="hero-stat-label">GPA · MS Computer Science</div>
-        </div>
-      </div>
-
-      <div class="hero-actions">
-        <a href="#experience" class="btn btn-primary">View Full Experience</a>
-        <a href="./Resume- Harsh Tita.pdf" class="btn btn-secondary" download>
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-            <polyline points="7 10 12 15 17 10"></polyline>
-            <line x1="12" y1="15" x2="12" y2="3"></line>
-          </svg>
-          Resume
-        </a>
-        <a href="https://github.com/iamharshtita" target="_blank" class="btn btn-ghost">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-          </svg>
-          GitHub
-        </a>
-        <a href="https://www.linkedin.com/in/harsh-tita" target="_blank" class="btn btn-ghost">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-          </svg>
-          LinkedIn
-        </a>
-      </div>
-      </div>
-
-      <div class="hero-photo">
-        <div class="hero-photo-frame">
+        <div class="hero-portrait reveal">
           <img src="./images/hero-picture.jpeg" alt="Harsh Tita" loading="eager">
         </div>
       </div>
-    </div>
-  </section>
 
-  <!-- About Section -->
-  <section id="about" class="section">
-    <div class="container-wide">
-      <div class="about-grid">
-        <div class="about-card highlight-card">
-          <div class="card-icon">💡</div>
-          <h3>What I Do</h3>
-          <p>I build AI-powered applications using LLMs, design agentic prediction systems, and create scalable cloud solutions for enterprise challenges.</p>
-        </div>
+      <div class="hero-foot">
+        <p class="hero-lead reveal">
+          Agentic AI, RAG and the cloud infrastructure underneath it. 2.5+ years shipping across
+          ZS Associates, T&#8209;Mobile and the ASU AI Cloud Innovation Center (powered by AWS),
+          alongside an MS in Computer Science at Arizona State.
+        </p>
 
-        <div class="about-card">
-          <div class="card-icon">🎓</div>
-          <h3>Education</h3>
-          <p><strong>MS in Computer Science</strong><br>Arizona State University<br>Focus: AI, NLP, Distributed Systems</p>
-        </div>
+        <div class="hero-actions reveal">
+          <a href="./Resume- Harsh Tita.pdf" class="btn" download>
+            <span>Résumé</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              <polyline points="7 10 12 15 17 10"></polyline>
+              <line x1="12" y1="15" x2="12" y2="3"></line>
+            </svg>
+          </a>
 
-        <div class="about-card">
-          <div class="card-icon">🏢</div>
-          <h3>Recent Experience</h3>
-          <p><strong>Associate Engineer Intern, AI at T-Mobile</strong><br>Built agentic prediction systems using AWS and vector stores for portfolio management</p>
-        </div>
-
-        <div class="about-card highlight-card">
-          <div class="card-icon">🚀</div>
-          <h3>Industry Background</h3>
-          <p><strong>2.5+ years of experience</strong><br>ZS Associates, ASU AI Cloud Innovation Center<br>Backend, cloud infrastructure & data engineering</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Experience Section -->
-  <!--
-    FORMATTING STANDARDS:
-    - Company format: Company Name, City, State/Country
-    - State abbreviations: Use 2-letter codes (AZ, TX, etc.)
-    - Date format: "Month Year - Present" for current roles, "Month Year" for ended roles
-    - Separator: Use a comma between company and location; hyphen (-) for date ranges
-  -->
-  <section id="experience" class="section">
-    <div class="container-wide">
-      <div class="section-header">
-        <h2 class="section-title">Work Experience</h2>
-        <p class="section-subtitle">Building AI systems and data infrastructure at scale</p>
-      </div>
-
-      <div class="timeline">
-        <div class="timeline-item">
-          <div class="timeline-marker"></div>
-          <div class="timeline-content">
-            <div class="timeline-date">January 2026 - Present</div>
-            <h3 class="timeline-title">AI Full Stack Developer (Part-time)</h3>
-            <div class="timeline-company">
-              <img src="./images/cic.png" alt="ASU AI Cloud Innovation Center" class="company-logo">
-              ASU AI Cloud Innovation Center, Scottsdale, AZ (powered by AWS)
-            </div>
-            <a href="https://smartchallenges.asu.edu" target="_blank" rel="noopener" class="timeline-link">Visit website
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+          <div class="socials">
+            <a href="https://github.com/iamharshtita" target="_blank" rel="noopener" class="icon-link" aria-label="GitHub">
+              <svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+              </svg>
             </a>
-            <div class="timeline-impact">
-              <span class="impact-metric">90% ↓ cost</span>
-              <span class="impact-desc">$700→$70/mo · accuracy 20%→80%</span>
-            </div>
-            <p class="timeline-description">
-              Cut AI infrastructure costs by 90% and lifted response accuracy from 20% to 80% by replacing
-              generic AWS crawlers with a focused Python crawler. Built an agentic email assistant for a
-              city government client using AWS Bedrock, Strands Agents, and RAG, dropping response time from
-              24 hours to 5 minutes with a 95% admin-approval rate. Automated end-to-end provisioning of
-              8 AWS services via AWS CDK (Infrastructure as Code).
-            </p>
-            <div class="timeline-skills">
-              <span>AWS Bedrock</span>
-              <span>Strands Agents</span>
-              <span>RAG</span>
-              <span>AWS CDK</span>
-              <span>Python</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="timeline-item">
-          <div class="timeline-marker"></div>
-          <div class="timeline-content">
-            <div class="timeline-date">May 2026 - August 2026</div>
-            <h3 class="timeline-title">Associate Engineer Intern, AI</h3>
-            <div class="timeline-company">
-              <img src="./images/tmobile-logo.png" alt="T-Mobile" class="company-logo">
-              T-Mobile USA, Inc., Frisco, TX
-            </div>
-            <a href="https://www.t-mobile.com" target="_blank" rel="noopener" class="timeline-link">Visit website
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+            <a href="https://www.linkedin.com/in/harsh-tita" target="_blank" rel="noopener" class="icon-link" aria-label="LinkedIn">
+              <svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+              </svg>
             </a>
-            <div class="timeline-impact">
-              <span class="impact-metric">$14M</span>
-              <span class="impact-desc">projected annual savings in deferred value</span>
-            </div>
-            <p class="timeline-description">
-              Built an agentic AI delivery-prediction system using Cohere embeddings and an S3 vector store
-              to surface similar historical Jira capabilities, enabling portfolio managers to make data-driven
-              intake decisions from past go-live slippages, bugs, and delivery patterns. Engineered a serverless
-              pipeline (AWS Lambda + EventBridge) for daily vector-store updates and shipped an end-to-end
-              Next.js frontend with an AWS ECS Fargate backend.
-            </p>
-            <div class="timeline-skills">
-              <span>Cohere</span>
-              <span>S3 Vector Store</span>
-              <span>FastAPI</span>
-              <span>Next.js</span>
-              <span>AWS Lambda</span>
-              <span>Agentic AI</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="timeline-item">
-          <div class="timeline-marker"></div>
-          <div class="timeline-content">
-            <div class="timeline-date">November 2023 - June 2025</div>
-            <h3 class="timeline-title">Software Engineer</h3>
-            <div class="timeline-company">
-              <img src="./images/zs-logo.png" alt="ZS Associates" class="company-logo">
-              ZS Associates, Pune, India
-            </div>
-            <a href="https://www.zs.com" target="_blank" rel="noopener" class="timeline-link">Visit website
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+            <a href="mailto:harshtita01@gmail.com" class="icon-link" aria-label="Email">
+              <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
             </a>
-            <div class="timeline-impact">
-              <span class="impact-metric">+60% engagement</span>
-              <span class="impact-desc">−80% manual QA effort</span>
-            </div>
-            <p class="timeline-description">
-              Deployed a Gen-AI summarization pipeline on AWS EC2 (Python backend, Angular frontend) that
-              transformed healthcare metrics into insights and boosted user engagement by 60%. Engineered
-              Python/SQL data-validation pipelines that cut manual QA effort by 80%, and automated ETL
-              workflows (AWS EMR, S3, boto3) to eliminate weekend manual operations, then scaled the
-              initiative by onboarding 4 engineers across daily, weekly, and monthly pipelines.
-            </p>
-            <div class="timeline-skills">
-              <span>Python</span>
-              <span>AWS EMR</span>
-              <span>SQL</span>
-              <span>Hadoop</span>
-              <span>Angular</span>
-              <span>Gen-AI</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="timeline-item">
-          <div class="timeline-marker"></div>
-          <div class="timeline-content">
-            <div class="timeline-date">June 2023 - November 2023</div>
-            <h3 class="timeline-title">Backend Developer</h3>
-            <div class="timeline-company">
-              <img src="./images/techmojo-logo.png" alt="Techmojo Solutions" class="company-logo">
-              Techmojo Solutions, Hyderabad, India
-            </div>
-            <a href="https://techmojo.com" target="_blank" rel="noopener" class="timeline-link">Visit website
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
-            </a>
-            <p class="timeline-description">
-              Built and maintained backend services, API development, and database optimization.
-              Focused on creating scalable and efficient server-side applications.
-            </p>
-            <div class="timeline-skills">
-              <span>Backend APIs</span>
-              <span>Database Design</span>
-              <span>Golang</span>
-              <span>REST</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="timeline-item">
-          <div class="timeline-marker special"></div>
-          <div class="timeline-content">
-            <div class="timeline-date">June 2022 - August 2022</div>
-            <h3 class="timeline-title">Summer Research Intern</h3>
-            <div class="timeline-company">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/b/bd/Indian_Space_Research_Organisation_Logo.svg" alt="ISRO" class="company-logo">
-              NRSC, ISRO, Kolkata, India
-            </div>
-            <a href="https://www.nrsc.gov.in" target="_blank" rel="noopener" class="timeline-link">Visit website
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
-            </a>
-            <div class="timeline-image">
-              <img src="./images/certificate_moment.jpeg" alt="ISRO Certificate Moment" loading="lazy">
-            </div>
-            <p class="timeline-description">
-              Research internship at India's space agency focusing on geospatial data analysis
-              and satellite image processing.
-            </p>
-            <div class="timeline-skills">
-              <span>Research</span>
-              <span>Geospatial Analysis</span>
-              <span>Python</span>
-              <span>Data Analysis</span>
-            </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Projects Section -->
-  <section id="projects" class="section section-dark">
-    <div class="container-wide">
-      <div class="section-header">
-        <h2 class="section-title">Featured Projects</h2>
-        <p class="section-subtitle">Real-world applications built with AI, data engineering, and full-stack technologies</p>
+    <!-- ============================================
+         STATS STRIP
+         ============================================ -->
+    <section class="stats" aria-label="At a glance">
+      <ul class="stats-row">
+        <li class="stat reveal">
+          <p class="stat-label">Experience</p>
+          <p class="stat-value">2.5+ years</p>
+        </li>
+        <li class="stat reveal">
+          <p class="stat-label">Projected savings</p>
+          <p class="stat-value" data-count="14" data-prefix="$" data-suffix="M">$14M</p>
+        </li>
+        <li class="stat reveal">
+          <p class="stat-label">AI infra cost cut</p>
+          <p class="stat-value" data-count="90" data-suffix="%">90%</p>
+        </li>
+        <li class="stat reveal">
+          <p class="stat-label">Education</p>
+          <p class="stat-value">MS CS, ASU</p>
+        </li>
+      </ul>
+    </section>
+
+    <!-- ============================================
+         01 — SELECTED WORK
+         ============================================
+      PROJECT VISUALS
+      Each row's .shot-frame holds a 16:10 media frame. The variant class controls fit:
+        .shot-brand — a logo, centred on a white panel
+        .shot-app   — a screenshot, fit whole on a panel matched to the app's own
+                      background colour so the letterbox is invisible (see .shot-auris)
+      A true 16:10 screenshot needs no variant; it fills the frame.
+    -->
+    <section class="section" id="work">
+      <div class="section-head">
+        <p class="section-index reveal"><span>01</span> Selected work</p>
+        <h2 class="section-statement reveal">Systems taken from<br>idea to production.</h2>
       </div>
 
-      <div class="projects-grid">
-        <!-- Project 1: ReEarth -->
-        <article class="project-card">
-          <div class="project-header">
-            <div class="project-icon">🌱</div>
-            <a href="https://github.com/iamharshtita/AI-Powered-Sustainable-Access-Economy-Platform-InnovationHacks2.0" target="_blank" class="project-link">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <ul class="work-list">
+        <!-- ReEarth -->
+        <li class="work-row reveal">
+          <div class="work-copy">
+            <h3 class="work-title">ReEarth</h3>
+            <p class="work-kicker">AI Sustainable Sharing Platform</p>
+            <p class="work-desc">
+              AI sustainability marketplace that scores borrow/buy/skip decisions and tracks CO₂
+              in real time, running serverless on 12 Lambda functions and Amazon Bedrock.
+            </p>
+            <ul class="work-tags">
+              <li>AWS Bedrock</li>
+              <li>AWS CDK</li>
+              <li>Next.js</li>
+              <li>DynamoDB</li>
+            </ul>
+            <div class="work-meta">
+              <a href="https://github.com/iamharshtita/AI-Powered-Sustainable-Access-Economy-Platform-InnovationHacks2.0" target="_blank" rel="noopener" class="text-link">
+                View code
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+              </a>
+              <span class="work-note">InnovationHacks 2.0 · Apr 2026</span>
+            </div>
+          </div>
+
+          <div class="shot-frame shot-brand">
+            <img src="./images/reearth-logo.png" alt="ReEarth logo" loading="lazy">
+          </div>
+        </li>
+
+        <!-- Auris -->
+        <li class="work-row reveal">
+          <div class="work-copy">
+            <h3 class="work-title">Auris</h3>
+            <p class="work-kicker">Clinical Speech Intelligence</p>
+            <p class="work-desc">
+              Healthcare platform that runs automated post-discharge calls, transcribes them at
+              medical-grade accuracy, and delivers risk-scored reports to care teams.
+            </p>
+            <ul class="work-tags">
+              <li>AWS Bedrock</li>
+              <li>Amazon Transcribe</li>
+              <li>Lambda</li>
+              <li>Next.js</li>
+            </ul>
+            <div class="work-meta">
+              <a href="https://github.com/iamharshtita/Auris-Transforming-healthcare-calls-into-clinical-clarity" target="_blank" rel="noopener" class="text-link">
+                View code
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+              </a>
+              <span class="work-note">3-layer transcription pipeline</span>
+            </div>
+          </div>
+
+          <div class="shot-frame shot-app shot-auris">
+            <img src="./images/auris-dashboard.png" alt="Auris clinician dashboard showing a call detail view with clinical risk assessment, extracted medications and symptoms, and a transcription confidence heatmap" loading="lazy">
+          </div>
+        </li>
+
+        <!-- Adaptive Knowledge Selector -->
+        <li class="work-row reveal">
+          <div class="work-copy">
+            <h3 class="work-title">Adaptive Knowledge Selector</h3>
+            <p class="work-kicker">Reinforcement-learning retrieval router</p>
+            <p class="work-desc">
+              Picks the best knowledge source per query. A DQN agent scores sources from 384-dim
+              embeddings and learns online from confidence-weighted rewards.
+            </p>
+            <ul class="work-tags">
+              <li>PyTorch</li>
+              <li>Deep RL / DQN</li>
+              <li>Sentence Transformers</li>
+              <li>AWS S3</li>
+            </ul>
+            <div class="work-meta">
+              <a href="https://github.com/iamharshtita/adaptive-knowledge-selector" target="_blank" rel="noopener" class="text-link">
+                View code
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+              </a>
+              <span class="work-note">Learns from every query</span>
+            </div>
+          </div>
+
+          <div class="shot-frame shot-app shot-aks">
+            <img src="./images/knowledge-selector-pipeline.png" alt="Reinforcement learning pipeline: a user query is embedded by Sentence Transformers, a DQN agent predicts Q-values and selects a knowledge source, then automatic reward computation feeds an experience buffer that retrains the Q-network" loading="lazy">
+          </div>
+        </li>
+      </ul>
+
+      <!-- Secondary work -->
+      <div class="work-more">
+        <p class="minor-label reveal">Also built</p>
+        <ul class="minor-list">
+          <li class="minor-row reveal">
+            <h4 class="minor-title">Resume-Job Matching System</h4>
+            <p class="minor-desc">Semantic matching of resumes to job descriptions with NLP ranking algorithms.</p>
+            <p class="minor-tags">Python · NLP</p>
+            <a href="https://github.com/iamharshtita/resume-job-matching-system" target="_blank" rel="noopener" class="minor-link" aria-label="View code for Resume-Job Matching System">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
                 <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
                 <polyline points="15 3 21 3 21 9"></polyline>
                 <line x1="10" y1="14" x2="21" y2="3"></line>
               </svg>
             </a>
-          </div>
-          <h3 class="project-title">ReEarth: AI Sustainable Sharing Platform</h3>
-          <p class="project-description">
-            Full-stack AI sustainability marketplace built at InnovationHacks 2.0, using 12 AWS Lambda
-            functions and Amazon Bedrock for borrow/buy/skip recommendations, real-time CO₂ tracking, and
-            sustainability scoring. Deployed serverless via AWS CDK, integrating Auth0, Stripe payments,
-            ElevenLabs voice search, Amazon Location Service, Next.js, and DynamoDB.
-          </p>
-          <div class="project-tech">
-            <span class="tech-tag">AWS Bedrock</span>
-            <span class="tech-tag">AWS CDK</span>
-            <span class="tech-tag">Next.js</span>
-            <span class="tech-tag">DynamoDB</span>
-            <span class="tech-tag">Stripe</span>
-            <span class="tech-tag">Auth0</span>
-          </div>
-          <div class="project-meta">
-            <span class="meta-item">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
-              </svg>
-              InnovationHacks 2.0
-            </span>
-            <span class="meta-item">Apr 2026</span>
-          </div>
-        </article>
+          </li>
 
-        <!-- Project 2: Auris -->
-        <article class="project-card">
-          <div class="project-header">
-            <div class="project-icon">🩺</div>
-            <a href="https://github.com/iamharshtita/Auris-Transforming-healthcare-calls-into-clinical-clarity" target="_blank" class="project-link">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <!-- No public repo for this one, so the row has no code link. -->
+          <li class="minor-row reveal">
+            <h4 class="minor-title">Stance Detection with Fine-Tuned LLMs</h4>
+            <p class="minor-desc">Phi-3 Mini, Mistral 7B and Llama 3.1 8B fine-tuned with PEFT/LoRA — 80.02% accuracy on SemEval-2016.</p>
+            <p class="minor-tags">PEFT / LoRA · PyTorch</p>
+          </li>
+
+          <li class="minor-row reveal">
+            <h4 class="minor-title">Cryptracker</h4>
+            <p class="minor-desc">Real-time crypto dashboard with price tracking and trend visualisation.</p>
+            <p class="minor-tags">React · Node.js</p>
+            <a href="https://github.com/iamharshtita/cryptracker" target="_blank" rel="noopener" class="minor-link" aria-label="View code for Cryptracker">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
                 <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
                 <polyline points="15 3 21 3 21 9"></polyline>
                 <line x1="10" y1="14" x2="21" y2="3"></line>
               </svg>
             </a>
-          </div>
-          <h3 class="project-title">Auris: Clinical Speech Intelligence</h3>
-          <p class="project-description">
-            End-to-end healthcare AI platform that runs automated post-discharge check-in calls, transcribes
-            them with medical-grade accuracy, and delivers risk-scored clinical reports to care teams. Built on
-            AWS serverless with a 3-layer transcription pipeline (custom medical vocabulary, phonetic and dosage
-            correction, and a Bedrock clinical audit), a real-time conversational bot (Bedrock Nova Pro plus
-            ElevenLabs), and a Next.js clinician dashboard.
-          </p>
-          <div class="project-tech">
-            <span class="tech-tag">AWS Bedrock</span>
-            <span class="tech-tag">Amazon Transcribe</span>
-            <span class="tech-tag">Lambda</span>
-            <span class="tech-tag">DynamoDB</span>
-            <span class="tech-tag">Cognito</span>
-            <span class="tech-tag">Next.js</span>
-          </div>
-          <div class="project-meta">
-            <span class="meta-item">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                <circle cx="12" cy="12" r="10"></circle>
-              </svg>
-              Python
-            </span>
-            <span class="meta-item">Healthcare AI</span>
-          </div>
-        </article>
+          </li>
+        </ul>
+      </div>
+    </section>
 
-        <!-- Project 3: Resume Matcher -->
-        <article class="project-card">
-          <div class="project-header">
-            <div class="project-icon">🎯</div>
-            <a href="https://github.com/iamharshtita/resume-job-matching-system" target="_blank" class="project-link">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                <polyline points="15 3 21 3 21 9"></polyline>
-                <line x1="10" y1="14" x2="21" y2="3"></line>
+    <!-- ============================================
+         02 — EXPERIENCE
+         ============================================
+      FORMATTING STANDARDS:
+      - Company format: Company Name, City, State/Country
+      - State abbreviations: Use 2-letter codes (AZ, TX, etc.)
+      - Date format: "Month Year — Present" for current roles
+    -->
+    <section class="section" id="experience">
+      <div class="section-head">
+        <p class="section-index reveal"><span>02</span> Experience</p>
+        <h2 class="section-statement reveal">2.5+ years of<br>shipping to production.</h2>
+      </div>
+
+      <ul class="role-list">
+        <li class="role reveal">
+          <div class="role-lead">
+            <h3 class="role-title">AI Full Stack Developer</h3>
+            <p class="role-org">
+              <img src="./images/cic.png" alt="" class="role-logo" aria-hidden="true">
+              ASU AI Cloud Innovation Center
+            </p>
+            <p class="role-place">Scottsdale, AZ · powered by AWS</p>
+            <a href="https://smartchallenges.asu.edu" target="_blank" rel="noopener" class="text-link text-link-sm">
+              Visit site
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line>
               </svg>
             </a>
           </div>
-          <h3 class="project-title">Resume-Job Matching System</h3>
-          <p class="project-description">
-            Intelligent system that matches resumes to job descriptions using NLP and machine learning.
-            Built with Python, implements semantic analysis and ranking algorithms.
-          </p>
-          <div class="project-tech">
-            <span class="tech-tag">Python</span>
-            <span class="tech-tag">NLP</span>
-            <span class="tech-tag">Machine Learning</span>
-            <span class="tech-tag">Semantic Analysis</span>
+          <p class="role-dates">Jan 2026 — Present</p>
+          <div class="role-body">
+            <p class="role-metric">90% ↓ cost · $700→$70/mo · accuracy 20%→80%</p>
+            <p class="role-desc">
+              Cut AI infrastructure costs by 90% and lifted response accuracy from 20% to 80% by
+              replacing generic AWS crawlers with a focused Python crawler. Built an agentic email
+              assistant for a city government client using AWS Bedrock, Strands Agents and RAG,
+              dropping response time from 24 hours to 5 minutes with a 95% admin-approval rate.
+              Automated end-to-end provisioning of 8 AWS services via AWS CDK.
+            </p>
+            <ul class="role-tags">
+              <li>AWS Bedrock</li><li>Strands Agents</li><li>RAG</li><li>AWS CDK</li><li>Python</li>
+            </ul>
           </div>
-          <div class="project-meta">
-            <span class="meta-item">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                <circle cx="12" cy="12" r="10"></circle>
-              </svg>
-              Python
-            </span>
-            <span class="meta-item">Updated Apr 2026</span>
-          </div>
-        </article>
+        </li>
 
-        <!-- Project 4: Adaptive Knowledge Selector -->
-        <article class="project-card">
-          <div class="project-header">
-            <div class="project-icon">🧠</div>
-            <a href="https://github.com/iamharshtita/adaptive-knowledge-selector" target="_blank" class="project-link">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                <polyline points="15 3 21 3 21 9"></polyline>
-                <line x1="10" y1="14" x2="21" y2="3"></line>
+        <li class="role reveal">
+          <div class="role-lead">
+            <h3 class="role-title">Associate Engineer Intern, AI</h3>
+            <p class="role-org">
+              <img src="./images/tmobile-logo.png" alt="" class="role-logo" aria-hidden="true">
+              T-Mobile USA, Inc.
+            </p>
+            <p class="role-place">Frisco, TX</p>
+            <a href="https://www.t-mobile.com" target="_blank" rel="noopener" class="text-link text-link-sm">
+              Visit site
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line>
               </svg>
             </a>
           </div>
-          <h3 class="project-title">Adaptive Knowledge Selector</h3>
-          <p class="project-description">
-            AI system that dynamically selects and retrieves relevant knowledge based on context.
-            Implements advanced retrieval mechanisms for intelligent information processing.
-          </p>
-          <div class="project-tech">
-            <span class="tech-tag">Python</span>
-            <span class="tech-tag">AI/ML</span>
-            <span class="tech-tag">RAG</span>
-            <span class="tech-tag">Knowledge Systems</span>
+          <p class="role-dates">May 2026 — Aug 2026</p>
+          <div class="role-body">
+            <p class="role-metric">$14M projected annual savings in deferred value</p>
+            <p class="role-desc">
+              Built an agentic AI delivery-prediction system using Cohere embeddings and an S3 vector
+              store to surface similar historical Jira capabilities, enabling portfolio managers to make
+              data-driven intake decisions from past go-live slippages, bugs and delivery patterns.
+              Engineered a serverless pipeline (AWS Lambda + EventBridge) for daily vector-store updates
+              and shipped an end-to-end Next.js frontend with an AWS ECS Fargate backend.
+            </p>
+            <ul class="role-tags">
+              <li>Cohere</li><li>S3 Vector Store</li><li>FastAPI</li><li>Next.js</li><li>AWS Lambda</li><li>Agentic AI</li>
+            </ul>
           </div>
-          <div class="project-meta">
-            <span class="meta-item">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                <circle cx="12" cy="12" r="10"></circle>
-              </svg>
-              Python
-            </span>
-            <span class="meta-item">Updated Apr 2026</span>
-          </div>
-        </article>
+        </li>
 
-        <!-- Project 5: Stance Detection LLM -->
-        <article class="project-card">
-          <div class="project-header">
-            <div class="project-icon">🌐</div>
-            <div class="project-badge">80.02% Accuracy</div>
-          </div>
-          <h3 class="project-title">Stance Detection using LLMs</h3>
-          <p class="project-description">
-            Fine-tuned Phi-3 Mini, Mistral 7B, and Llama 3.1 8B on the SemEval-2016 dataset using
-            Parameter-Efficient Fine-Tuning (PEFT) with LoRA and advanced prompt engineering, achieving
-            80.02% accuracy and outperforming baseline approaches.
-          </p>
-          <div class="project-tech">
-            <span class="tech-tag">PyTorch</span>
-            <span class="tech-tag">Hugging Face</span>
-            <span class="tech-tag">PEFT / LoRA</span>
-            <span class="tech-tag">LLMs</span>
-            <span class="tech-tag">NLP</span>
-          </div>
-          <div class="project-meta">
-            <span class="meta-item">Research Project</span>
-            <span class="meta-item">Nov 2025</span>
-          </div>
-        </article>
-
-        <!-- Project 6: Cryptracker -->
-        <article class="project-card">
-          <div class="project-header">
-            <div class="project-icon">💹</div>
-            <a href="https://github.com/iamharshtita/cryptracker" target="_blank" class="project-link">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                <polyline points="15 3 21 3 21 9"></polyline>
-                <line x1="10" y1="14" x2="21" y2="3"></line>
+        <li class="role reveal">
+          <div class="role-lead">
+            <h3 class="role-title">Software Engineer</h3>
+            <p class="role-org">
+              <img src="./images/zs-logo.png" alt="" class="role-logo" aria-hidden="true">
+              ZS Associates
+            </p>
+            <p class="role-place">Pune, India</p>
+            <a href="https://www.zs.com" target="_blank" rel="noopener" class="text-link text-link-sm">
+              Visit site
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line>
               </svg>
             </a>
           </div>
-          <h3 class="project-title">Cryptracker</h3>
-          <p class="project-description">
-            Real-time cryptocurrency dashboard with market analysis, price tracking, and trend visualization.
-            Built with React and Node.js, integrates multiple crypto APIs.
-          </p>
-          <div class="project-tech">
-            <span class="tech-tag">React</span>
-            <span class="tech-tag">Node.js</span>
-            <span class="tech-tag">REST API</span>
-            <span class="tech-tag">Real-time Data</span>
+          <p class="role-dates">Nov 2023 — Jun 2025</p>
+          <div class="role-body">
+            <p class="role-metric">+60% engagement · −80% manual QA effort</p>
+            <p class="role-desc">
+              Deployed a Gen-AI summarization pipeline on AWS EC2 (Python backend, Angular frontend)
+              that turned healthcare metrics into insights and boosted user engagement by 60%.
+              Engineered Python/SQL data-validation pipelines that cut manual QA effort by 80%, and
+              automated ETL workflows (AWS EMR, S3, boto3) to eliminate weekend manual operations,
+              then scaled the initiative by onboarding 4 engineers.
+            </p>
+            <ul class="role-tags">
+              <li>Python</li><li>AWS EMR</li><li>SQL</li><li>Hadoop</li><li>Angular</li><li>Gen-AI</li>
+            </ul>
           </div>
-          <div class="project-meta">
-            <span class="meta-item">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                <circle cx="12" cy="12" r="10"></circle>
+        </li>
+
+        <li class="role reveal">
+          <div class="role-lead">
+            <h3 class="role-title">Backend Developer</h3>
+            <p class="role-org">
+              <img src="./images/techmojo-logo.png" alt="" class="role-logo" aria-hidden="true">
+              Techmojo Solutions
+            </p>
+            <p class="role-place">Hyderabad, India</p>
+            <a href="https://techmojo.com" target="_blank" rel="noopener" class="text-link text-link-sm">
+              Visit site
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line>
               </svg>
-              JavaScript
-            </span>
-            <span class="meta-item">Full Stack</span>
+            </a>
           </div>
-        </article>
-      </div>
-    </div>
-  </section>
+          <p class="role-dates">Jun 2023 — Nov 2023</p>
+          <div class="role-body">
+            <p class="role-desc">
+              Built and maintained backend services, API development and database optimization,
+              focused on scalable and efficient server-side applications.
+            </p>
+            <ul class="role-tags">
+              <li>Backend APIs</li><li>Database Design</li><li>Golang</li><li>REST</li>
+            </ul>
+          </div>
+        </li>
 
-  <!-- Skills Section -->
-  <section id="skills" class="section section-dark">
-    <div class="container-wide">
-      <div class="section-header">
-        <h2 class="section-title">Technical Skills</h2>
-        <p class="section-subtitle">Technologies and tools I work with</p>
-      </div>
+        <li class="role reveal">
+          <div class="role-lead">
+            <h3 class="role-title">Summer Research Intern</h3>
+            <p class="role-org">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/b/bd/Indian_Space_Research_Organisation_Logo.svg" alt="" class="role-logo" aria-hidden="true">
+              NRSC, ISRO
+            </p>
+            <p class="role-place">Kolkata, India</p>
+            <a href="https://www.nrsc.gov.in" target="_blank" rel="noopener" class="text-link text-link-sm">
+              Visit site
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line>
+              </svg>
+            </a>
+          </div>
+          <p class="role-dates">Jun 2022 — Aug 2022</p>
+          <div class="role-body">
+            <p class="role-desc">
+              Research internship at India's space agency focused on geospatial data analysis and
+              satellite image processing.
+            </p>
+            <ul class="role-tags">
+              <li>Research</li><li>Geospatial Analysis</li><li>Python</li><li>Data Analysis</li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </section>
 
-      <div class="skills-grid">
-        <div class="skill-category">
-          <div class="skill-header">
-            <div class="skill-icon">💻</div>
-            <h3>Programming Languages</h3>
-          </div>
-          <div class="skill-tags">
-            <span class="skill-tag">Python</span>
-            <span class="skill-tag">Golang</span>
-            <span class="skill-tag">Java</span>
-            <span class="skill-tag">C/C++</span>
-            <span class="skill-tag">JavaScript</span>
-            <span class="skill-tag">SQL</span>
-          </div>
-        </div>
-
-        <div class="skill-category">
-          <div class="skill-header">
-            <div class="skill-icon">🤖</div>
-            <h3>AI &amp; Machine Learning</h3>
-          </div>
-          <div class="skill-tags">
-            <span class="skill-tag">PyTorch</span>
-            <span class="skill-tag">TensorFlow</span>
-            <span class="skill-tag">Scikit-Learn</span>
-            <span class="skill-tag">Hugging Face</span>
-            <span class="skill-tag">LLMs</span>
-            <span class="skill-tag">RAG</span>
-            <span class="skill-tag">Agentic AI</span>
-          </div>
-        </div>
-
-        <div class="skill-category">
-          <div class="skill-header">
-            <div class="skill-icon">⚙️</div>
-            <h3>Backend &amp; Systems</h3>
-          </div>
-          <div class="skill-tags">
-            <span class="skill-tag">REST APIs</span>
-            <span class="skill-tag">Distributed Systems</span>
-            <span class="skill-tag">ETL Pipelines</span>
-            <span class="skill-tag">Kafka</span>
-            <span class="skill-tag">Hadoop</span>
-          </div>
-        </div>
-
-        <div class="skill-category">
-          <div class="skill-header">
-            <div class="skill-icon">☁️</div>
-            <h3>Cloud &amp; Databases</h3>
-          </div>
-          <div class="skill-tags">
-            <span class="skill-tag">AWS Bedrock</span>
-            <span class="skill-tag">AgentCore</span>
-            <span class="skill-tag">Lambda</span>
-            <span class="skill-tag">S3</span>
-            <span class="skill-tag">EC2</span>
-            <span class="skill-tag">EMR</span>
-            <span class="skill-tag">PostgreSQL</span>
-            <span class="skill-tag">MongoDB</span>
-            <span class="skill-tag">CockroachDB</span>
-          </div>
-        </div>
-
-        <div class="skill-category">
-          <div class="skill-header">
-            <div class="skill-icon">🧩</div>
-            <h3>Frameworks</h3>
-          </div>
-          <div class="skill-tags">
-            <span class="skill-tag">Golang Gin</span>
-            <span class="skill-tag">React</span>
-            <span class="skill-tag">Angular</span>
-            <span class="skill-tag">Next.js</span>
-            <span class="skill-tag">FastAPI</span>
-          </div>
-        </div>
-
-        <div class="skill-category">
-          <div class="skill-header">
-            <div class="skill-icon">🛠️</div>
-            <h3>Developer Tools</h3>
-          </div>
-          <div class="skill-tags">
-            <span class="skill-tag">Docker</span>
-            <span class="skill-tag">Kubernetes</span>
-            <span class="skill-tag">GitLab</span>
-            <span class="skill-tag">Claude Code</span>
-            <span class="skill-tag">Cursor</span>
-            <span class="skill-tag">Kiro</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Moments Section -->
-  <section id="moments" class="section">
-    <div class="container-wide">
-      <div class="section-header">
-        <h2 class="section-title">Beyond the Résumé</h2>
-        <p class="section-subtitle">Moments from the journey — hackathons, teams, and the people behind the work</p>
+    <!-- ============================================
+         03 — CAPABILITIES
+         ============================================ -->
+    <section class="section" id="skills">
+      <div class="section-head">
+        <p class="section-index reveal"><span>03</span> Capabilities</p>
+        <h2 class="section-statement reveal">The stack I<br>reach for.</h2>
       </div>
 
-      <!-- Kiro Feature Spotlight -->
-      <div class="spotlight">
-        <div class="spotlight-media">
+      <div class="cap-list">
+        <div class="cap-row reveal">
+          <p class="cap-label">Languages</p>
+          <ul class="cap-tags">
+            <li>Python</li><li>Golang</li><li>Java</li><li>C/C++</li><li>JavaScript</li><li>SQL</li>
+          </ul>
+        </div>
+
+        <div class="cap-row reveal">
+          <p class="cap-label">AI &amp; Machine Learning</p>
+          <ul class="cap-tags">
+            <li>PyTorch</li><li>TensorFlow</li><li>Scikit-Learn</li><li>Hugging Face</li><li>LLMs</li><li>RAG</li><li>Agentic AI</li>
+          </ul>
+        </div>
+
+        <div class="cap-row reveal">
+          <p class="cap-label">Cloud &amp; Data</p>
+          <ul class="cap-tags">
+            <li>AWS Bedrock</li><li>AgentCore</li><li>Lambda</li><li>S3</li><li>EC2</li><li>EMR</li><li>PostgreSQL</li><li>MongoDB</li><li>CockroachDB</li>
+          </ul>
+        </div>
+
+        <div class="cap-row reveal">
+          <p class="cap-label">Backend &amp; Systems</p>
+          <ul class="cap-tags">
+            <li>REST APIs</li><li>Distributed Systems</li><li>ETL Pipelines</li><li>Kafka</li><li>Hadoop</li>
+          </ul>
+        </div>
+
+        <div class="cap-row reveal">
+          <p class="cap-label">Frameworks</p>
+          <ul class="cap-tags">
+            <li>Next.js</li><li>React</li><li>Angular</li><li>FastAPI</li><li>Golang Gin</li>
+          </ul>
+        </div>
+
+        <div class="cap-row reveal">
+          <p class="cap-label">Tooling</p>
+          <ul class="cap-tags">
+            <li>Docker</li><li>Kubernetes</li><li>GitLab</li><li>Claude Code</li><li>Cursor</li><li>Kiro</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================
+         04 — BEYOND THE RÉSUMÉ
+         ============================================ -->
+    <section class="section" id="moments">
+      <div class="section-head">
+        <p class="section-index reveal"><span>04</span> Beyond the résumé</p>
+        <h2 class="section-statement reveal">Featured along<br>the way.</h2>
+      </div>
+
+      <div class="feature reveal">
+        <div class="feature-media">
           <img src="./images/kiro-student-feature.jpeg" alt="Harsh Tita's testimonial featured on the Kiro website" loading="lazy">
         </div>
-        <div class="spotlight-body">
-          <div class="spotlight-badge">Featured on kiro.dev</div>
-          <p class="spotlight-quote">
-            "I used Kiro to build a fully functional RAG-based chatbot in just one day, and it completely
-            transformed my development experience. This shift in workflow is preparing me for the future of
-            AI Engineering, where leveraging intelligent tools effectively will be just as important as
-            writing code itself."
+        <div class="feature-copy">
+          <p class="feature-badge">Featured on kiro.dev</p>
+          <p class="feature-quote">
+            "I used Kiro to build a fully functional RAG-based chatbot in just one day, and it
+            completely transformed my development experience."
           </p>
-          <p class="spotlight-cite">
-            <strong>Harsh Tita</strong>, quoted as a student voice on Kiro's official website
-            (Kiro is AWS's agentic IDE).
-          </p>
-          <a href="https://kiro.dev/students/" target="_blank" rel="noopener" class="spotlight-link">
-            See the feature on kiro.dev
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <line x1="5" y1="12" x2="19" y2="12"></line>
-              <polyline points="12 5 19 12 12 19"></polyline>
+          <p class="feature-cite">Quoted as a student voice on the official site for Kiro, AWS's agentic IDE.</p>
+          <a href="https://kiro.dev/students/" target="_blank" rel="noopener" class="text-link">
+            See the feature
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline>
             </svg>
           </a>
         </div>
       </div>
 
-      <!-- Kiro Anniversary Video Feature -->
-      <div class="spotlight video-spotlight">
+      <div class="feature feature-flip reveal">
         <button class="video-poster" type="button" data-video-open aria-label="Play the Kiro anniversary video featuring Harsh Tita">
           <img src="./images/kiro-linkedin-video.jpeg" alt="Harsh Tita featured in Kiro's 1-year anniversary video on LinkedIn" loading="lazy">
           <span class="video-play" aria-hidden="true">
             <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="6 4 20 12 6 20 6 4"></polygon></svg>
           </span>
         </button>
-        <div class="spotlight-body">
-          <div class="spotlight-badge">Featured on LinkedIn</div>
-          <p class="spotlight-quote">
-            Kiro featured my story in their 1-year anniversary video, spotlighting how students turn
-            simple ideas into production-ready apps with Kiro.
+        <div class="feature-copy">
+          <p class="feature-badge">Featured on LinkedIn</p>
+          <p class="feature-quote">
+            Kiro featured my story in their 1-year anniversary video, shared to their 28k+ following.
           </p>
-          <p class="spotlight-cite">
-            <strong>Harsh Tita</strong>, in Kiro's official anniversary video shared to their 28k+ LinkedIn following.
-          </p>
-          <button class="spotlight-link video-open" type="button" data-video-open>
+          <p class="feature-cite">Spotlighting how students turn simple ideas into production-ready apps.</p>
+          <button class="text-link video-open" type="button" data-video-open>
             Play the video
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="6 4 20 12 6 20 6 4"></polygon></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="6 4 20 12 6 20 6 4"></polygon></svg>
           </button>
         </div>
       </div>
 
-      <!-- Photo Masonry Gallery -->
-      <div class="moments-grid">
-        <figure class="moment">
-          <img src="./images/hackathon-group.jpeg" alt="Team at the T-Mobile Hackathon 2026" loading="lazy">
-          <figcaption>Building with the team at the T-Mobile Hackathon 2026</figcaption>
-        </figure>
-
-        <figure class="moment">
-          <img src="./images/hackathon-solo-1.jpeg" alt="Harsh Tita at the T-Mobile Hackathon 2026" loading="lazy">
-          <figcaption>Hackathon energy, T-Mobile 2026</figcaption>
-        </figure>
-
-        <figure class="moment">
-          <img src="./images/hackathon-demo-1.jpeg" alt="Harsh Tita reviewing his project with mentors at Opportunity Hack" loading="lazy">
-          <figcaption>Demo feedback at Opportunity Hack 2026</figcaption>
-        </figure>
-
-        <figure class="moment">
-          <img src="./images/innovationhacks-demo.jpeg" alt="Harsh Tita demoing the ReEarth carbon project to a judge at InnovationHacks 2.0" loading="lazy">
-          <figcaption>Demoing the ReEarth carbon project at InnovationHacks 2.0</figcaption>
-        </figure>
-
-        <figure class="moment">
-          <img src="./images/bowling-event-tmobile.jpeg" alt="T-Mobile summer intern bowling night" loading="lazy">
-          <figcaption>Summer intern social, T-Mobile 2026</figcaption>
-        </figure>
-
-        <figure class="moment">
-          <img src="./images/national-intern-day.jpeg" alt="National Intern Day gift from T-Mobile" loading="lazy">
-          <figcaption>Happy National Intern Day, from the T-Mobile team</figcaption>
-        </figure>
-
-        <figure class="moment">
-          <img src="./images/cic-1.jpeg" alt="Harsh Tita at the ASU AI Cloud Innovation Center" loading="lazy">
-          <figcaption>On-site at the ASU AI Cloud Innovation Center</figcaption>
-        </figure>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact Section -->
-  <section id="contact" class="section">
-    <div class="container-narrow">
-      <div class="contact-content">
-        <h2 class="section-title">Let's Build Something</h2>
-        <p class="contact-text">
-          I'm actively seeking full-time opportunities in <strong>AI/ML Engineering</strong>,
-          <strong>Software Development</strong>, and <strong>Data Engineering</strong>.
-          Open to roles where I can leverage LLMs, build scalable systems, and solve complex technical challenges.
-        </p>
-
-        <div class="contact-grid">
-          <a href="mailto:harshtita01@gmail.com" class="contact-card">
-            <div class="contact-icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                <polyline points="22,6 12,13 2,6"></polyline>
-              </svg>
-            </div>
-            <div class="contact-info">
-              <div class="contact-label">Email</div>
-              <div class="contact-value">harshtita01@gmail.com</div>
-            </div>
-          </a>
-
-          <a href="https://www.linkedin.com/in/harsh-tita" target="_blank" class="contact-card">
-            <div class="contact-icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-              </svg>
-            </div>
-            <div class="contact-info">
-              <div class="contact-label">LinkedIn</div>
-              <div class="contact-value">harsh-tita</div>
-            </div>
-          </a>
-
-          <a href="https://github.com/iamharshtita" target="_blank" class="contact-card">
-            <div class="contact-icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-              </svg>
-            </div>
-            <div class="contact-info">
-              <div class="contact-label">GitHub</div>
-              <div class="contact-value">@iamharshtita</div>
-            </div>
-          </a>
-
-          <a href="./Resume- Harsh Tita.pdf" class="contact-card" download>
-            <div class="contact-icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                <polyline points="14 2 14 8 20 8"></polyline>
-                <line x1="12" y1="18" x2="12" y2="12"></line>
-                <line x1="9" y1="15" x2="15" y2="15"></line>
-              </svg>
-            </div>
-            <div class="contact-info">
-              <div class="contact-label">Resume</div>
-              <div class="contact-value">Download PDF</div>
-            </div>
-          </a>
-        </div>
-
-        <div class="cta-box">
-          <p>Ready to discuss opportunities? Let's connect!</p>
-          <a href="mailto:harshtita01@gmail.com" class="btn btn-primary btn-large">Get in Touch</a>
+      <div class="rail-wrap reveal">
+        <p class="minor-label">Hackathons, teams and the people behind the work</p>
+        <div class="rail">
+          <figure class="moment">
+            <img src="./images/hackathon-group.jpeg" alt="Team at the T-Mobile Hackathon 2026" loading="lazy">
+            <figcaption>Building with the team at the T-Mobile Hackathon 2026</figcaption>
+          </figure>
+          <figure class="moment">
+            <img src="./images/hackathon-solo-1.jpeg" alt="Harsh Tita at the T-Mobile Hackathon 2026" loading="lazy">
+            <figcaption>Hackathon energy, T-Mobile 2026</figcaption>
+          </figure>
+          <figure class="moment">
+            <img src="./images/hackathon-demo-1.jpeg" alt="Harsh Tita reviewing his project with mentors at Opportunity Hack" loading="lazy">
+            <figcaption>Demo feedback at Opportunity Hack 2026</figcaption>
+          </figure>
+          <figure class="moment">
+            <img src="./images/innovationhacks-demo.jpeg" alt="Harsh Tita demoing the ReEarth carbon project to a judge at InnovationHacks 2.0" loading="lazy">
+            <figcaption>Demoing the ReEarth carbon project at InnovationHacks 2.0</figcaption>
+          </figure>
+          <figure class="moment">
+            <img src="./images/bowling-event-tmobile.jpeg" alt="T-Mobile summer intern bowling night" loading="lazy">
+            <figcaption>Summer intern social, T-Mobile 2026</figcaption>
+          </figure>
+          <figure class="moment">
+            <img src="./images/national-intern-day.jpeg" alt="National Intern Day gift from T-Mobile" loading="lazy">
+            <figcaption>Happy National Intern Day, from the T-Mobile team</figcaption>
+          </figure>
+          <figure class="moment">
+            <img src="./images/cic-1.jpeg" alt="Harsh Tita at the ASU AI Cloud Innovation Center" loading="lazy">
+            <figcaption>On-site at the ASU AI Cloud Innovation Center</figcaption>
+          </figure>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container-wide">
-      <div class="footer-content">
-        <div class="footer-left">
-          <div class="footer-logo">HT</div>
-          <p>Building intelligent systems with AI and data</p>
-        </div>
-        <div class="footer-links">
-          <a href="https://github.com/iamharshtita" target="_blank">GitHub</a>
-          <a href="https://www.linkedin.com/in/harsh-tita" target="_blank">LinkedIn</a>
-          <a href="mailto:harshtita01@gmail.com">Email</a>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p>&copy; <span id="year"></span> Harsh Tita. Designed for impact.</p>
-      </div>
-    </div>
+    <!-- ============================================
+         CLOSING
+         ============================================ -->
+    <section class="closing" id="contact">
+      <p class="section-index reveal"><span>05</span> Get in touch</p>
+      <h2 class="closing-statement reveal">Let's build<br>something.</h2>
+      <p class="closing-text reveal">
+        Open to full-time roles in AI/ML engineering, software development and data engineering.
+      </p>
+      <a href="mailto:harshtita01@gmail.com" class="closing-mail reveal">harshtita01@gmail.com</a>
+    </section>
+  </main>
+
+  <!-- ============================================
+       FOOTER
+       ============================================ -->
+  <footer class="site-footer">
+    <p class="footer-name">Harsh Tita <span>&copy; <span id="year"></span></span></p>
+    <ul class="footer-links">
+      <li><a href="https://github.com/iamharshtita" target="_blank" rel="noopener">GitHub</a></li>
+      <li><a href="https://www.linkedin.com/in/harsh-tita" target="_blank" rel="noopener">LinkedIn</a></li>
+      <li><a href="mailto:harshtita01@gmail.com">Email</a></li>
+      <li><a href="./Resume- Harsh Tita.pdf" download>Résumé</a></li>
+    </ul>
   </footer>
 
   <!-- Lightbox / Photo Viewer -->
@@ -868,6 +631,6 @@
     </div>
   </div>
 
-  <script src="./script.js?v=4"></script>
+  <script src="./script.js?v=6"></script>
 </body>
 </html>
