@@ -316,8 +316,10 @@ button {
   margin: 0 0.35rem;
 }
 
+/* Sized so the longest line clears the portrait, which is bottom-anchored in
+   .hero-mid and rises into this block. */
 .hero-statement {
-  font-size: clamp(3.25rem, 10.5vw, 10rem);
+  font-size: clamp(3rem, 9.2vw, 8.5rem);
   font-weight: 500;
   line-height: 0.93;
   letter-spacing: -0.05em;
@@ -344,9 +346,12 @@ button {
 
 /* Rotating word. Width is animated per word by script.js so the trailing
    text slides rather than jumping, and short words leave no dead gap. */
+/* The one non-interactive use of the accent: a headline highlight on the
+   word that changes. It carries no underline and no hover, so it does not
+   read as a link. */
 .rotator {
   display: inline-block;
-  color: var(--ink);
+  color: var(--accent);
   white-space: nowrap;
   /* Clips the outgoing word while the slot resizes; it is near-invisible by
      then, and this keeps it off the following text. */
