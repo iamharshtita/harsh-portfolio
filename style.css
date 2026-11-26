@@ -272,7 +272,12 @@ button {
 
 .site-nav a:hover,
 .header-cta:hover {
-  color: var(--ink);
+  color: var(--accent);
+}
+
+.site-nav a:hover span,
+.header-cta:hover span {
+  color: var(--accent);
 }
 
 /* The in-nav contact link is for the mobile drawer only */
@@ -1037,11 +1042,14 @@ button {
   background-size: 100% 1px;
   background-position: 0 100%;
   background-repeat: no-repeat;
-  transition: background-size var(--t-base);
+  transition: background-size var(--t-base), color var(--t-fast);
 }
 
+/* Strengthen the affordance on hover rather than removing it: the earlier
+   underline-wipe left blue text with no underline at the moment of intent. */
 .closing-mail:hover {
-  background-size: 0 1px;
+  color: var(--accent-strong);
+  background-size: 100% 2px;
 }
 
 /* ========================================
@@ -1083,7 +1091,7 @@ button {
 }
 
 .footer-links a:hover {
-  color: var(--ink);
+  color: var(--accent);
 }
 
 /* ========================================
