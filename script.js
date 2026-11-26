@@ -107,12 +107,22 @@ document.addEventListener('DOMContentLoaded', function () {
     const duration = 1100;
     const start = performance.now();
 
+    // requestAnimationFrame is throttled in background tabs, which would leave
+    // a half-counted number on screen. Guarantee the final value on a timer.
+    const settle = setTimeout(() => {
+      el.textContent = formatStat(el, target);
+    }, duration + 400);
+
     function tick(now) {
       const progress = Math.min((now - start) / duration, 1);
       const eased = 1 - Math.pow(1 - progress, 3); // easeOutCubic
       el.textContent = formatStat(el, target * eased);
-      if (progress < 1) requestAnimationFrame(tick);
-      else el.textContent = formatStat(el, target);
+      if (progress < 1) {
+        requestAnimationFrame(tick);
+      } else {
+        clearTimeout(settle);
+        el.textContent = formatStat(el, target);
+      }
     }
 
     requestAnimationFrame(tick);
@@ -122,20 +132,32 @@ document.addEventListener('DOMContentLoaded', function () {
     const statObserver = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
+          delete entry.target.dataset.pending;
           countUp(entry.target);
           statObserver.unobserve(entry.target);
         }
       });
     }, { threshold: 0.4 });
 
+    // Blank every stat up front. The strip now sits above the fold on most
+    // laptops, so the observer fires on load; leaving the real value in place
+    // flashed it before the count-up restarted from zero.
     statValues.forEach(el => {
-      // Only blank to zero if it starts below the fold, so it is guaranteed to
-      // scroll into view. Anything already on screen keeps its real value.
-      if (el.getBoundingClientRect().top > window.innerHeight) {
-        el.textContent = formatStat(el, 0);
-      }
+      el.dataset.pending = '1';
+      el.textContent = formatStat(el, 0);
       statObserver.observe(el);
     });
+
+    // Safety net: if the observer never fires, show the real numbers rather
+    // than leaving zeros on screen.
+    setTimeout(() => {
+      statValues.forEach(el => {
+        if (el.dataset.pending === '1') {
+          delete el.dataset.pending;
+          el.textContent = formatStat(el, parseFloat(el.dataset.count));
+        }
+      });
+    }, 1600);
   }
 
   // ========================================
