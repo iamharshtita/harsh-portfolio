@@ -9,10 +9,17 @@
   --paper-alt: #F6F6F4;
   --ink: #111113;
   --ink-mid: #5B5B61;
-  --ink-soft: #8A8A91;
-  --ink-faint: #B4B4BA;
+  /* Contrast ratios on --paper, all verified against WCAG 2.1 AA (4.5:1 for
+     normal text). --ink-faint is only used for numerals and + glyphs. */
+  --ink-soft: #71717A;   /* 4.83:1 */
+  --ink-faint: #7E7E86;  /* 4.03:1 */
   --rule: #E3E3E0;
   --rule-strong: #C9C9C5;
+
+  /* Single accent, reserved for actions: content links, the primary CTA and
+     focus rings. In-page navigation stays ink. 6.70:1 on white. */
+  --accent: #1D4ED8;
+  --accent-strong: #1E3A8A;
 
   /* Typography */
   --font-display: 'Space Grotesk', system-ui, sans-serif;
@@ -89,7 +96,7 @@ button {
 }
 
 :focus-visible {
-  outline: 2px solid var(--ink);
+  outline: 2px solid var(--accent);
   outline-offset: 3px;
 }
 
@@ -117,30 +124,29 @@ button {
   margin-right: 0.85rem;
 }
 
-/* Underline-on-hover text link */
+/* Action link — accent, with its underline always present */
 .text-link {
   display: inline-flex;
   align-items: center;
   gap: 0.45rem;
   font-size: 0.95rem;
   font-weight: 500;
-  color: var(--ink);
+  color: var(--accent);
   padding-bottom: 2px;
-  background-image: linear-gradient(var(--ink), var(--ink));
+  background-image: linear-gradient(var(--accent), var(--accent));
   background-size: 100% 1px;
   background-position: 0 100%;
   background-repeat: no-repeat;
-  transition: background-size var(--t-base), gap var(--t-fast);
+  transition: background-size var(--t-base), gap var(--t-fast), color var(--t-fast);
 }
 
 .text-link:hover {
   gap: 0.7rem;
+  color: var(--accent-strong);
 }
 
 .text-link-sm {
   font-size: 0.85rem;
-  color: var(--ink-mid);
-  background-image: linear-gradient(var(--ink-soft), var(--ink-soft));
 }
 
 /* Primary button — a filled pill, the only solid shape on the page */
@@ -149,17 +155,17 @@ button {
   align-items: center;
   gap: 0.6rem;
   padding: 1rem 1.6rem;
-  background: var(--ink);
+  background: var(--accent);
   color: var(--paper);
   border-radius: 100px;
   font-size: 0.95rem;
   font-weight: 500;
-  transition: transform var(--t-fast), opacity var(--t-fast);
+  transition: transform var(--t-fast), background var(--t-fast);
 }
 
 .btn:hover {
   transform: translateY(-2px);
-  opacity: 0.88;
+  background: var(--accent-strong);
 }
 
 .icon-link {
@@ -175,8 +181,8 @@ button {
 }
 
 .icon-link:hover {
-  color: var(--ink);
-  border-color: var(--ink);
+  color: var(--accent);
+  border-color: var(--accent);
 }
 
 /* Scroll reveal */
@@ -532,12 +538,14 @@ button {
   margin-top: 1.75rem;
 }
 
+/* Carries real information (awards, status), so it sits at full AA rather
+   than on the faint token used for numerals and glyphs. */
 .work-note {
   font-family: var(--font-mono);
   font-size: 0.72rem;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  color: var(--ink-faint);
+  color: var(--ink-soft);
 }
 
 /* Media frame — one 16:10 window for every project */
@@ -648,8 +656,8 @@ button {
 }
 
 .minor-link:hover {
-  color: var(--ink);
-  border-color: var(--ink);
+  color: var(--accent);
+  border-color: var(--accent);
 }
 
 /* ========================================
@@ -923,8 +931,8 @@ button {
 }
 
 .rail-btn:hover:not(:disabled) {
-  color: var(--ink);
-  border-color: var(--ink);
+  color: var(--accent);
+  border-color: var(--accent);
 }
 
 /* Dimmed at each end of the track rather than hidden, so the control does
@@ -1023,8 +1031,9 @@ button {
   font-size: clamp(1.125rem, 2.4vw, 2rem);
   font-weight: 400;
   letter-spacing: -0.03em;
+  color: var(--accent);
   padding-bottom: 4px;
-  background-image: linear-gradient(var(--ink), var(--ink));
+  background-image: linear-gradient(var(--accent), var(--accent));
   background-size: 100% 1px;
   background-position: 0 100%;
   background-repeat: no-repeat;
