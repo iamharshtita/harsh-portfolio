@@ -297,9 +297,38 @@ button {
    ======================================== */
 
 .hero {
+  position: relative;
   padding: calc(var(--section-pad) + 5rem) var(--gutter) var(--section-pad);
   max-width: var(--max);
   margin: 0 auto;
+}
+
+/* Two layers fill the hero's empty upper-right, both behind the content and
+   both far too faint to compete with the text:
+     ::before  an accent dot grid, masked so it dissolves before the headline
+     ::after   a soft accent bloom underneath it, giving the area colour
+   Pure CSS, no images. */
+.hero::before,
+.hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.hero::before {
+  z-index: -1;
+  background-image: radial-gradient(var(--accent) 1.1px, transparent 1.1px);
+  background-size: 24px 24px;
+  opacity: 0.26;
+  -webkit-mask-image: radial-gradient(ellipse 60% 65% at 88% 18%, #000 0%, transparent 72%);
+  mask-image: radial-gradient(ellipse 60% 65% at 88% 18%, #000 0%, transparent 72%);
+}
+
+.hero::after {
+  z-index: -2;
+  background: radial-gradient(ellipse 50% 55% at 84% 20%,
+              rgba(0, 82, 255, 0.13) 0%, transparent 70%);
 }
 
 .hero-id {
