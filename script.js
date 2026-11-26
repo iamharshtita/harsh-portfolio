@@ -180,6 +180,7 @@ document.addEventListener('DOMContentLoaded', function () {
       nav.classList.toggle('is-open', open);
       navToggle.setAttribute('aria-expanded', String(open));
       if (toggleLabel) toggleLabel.textContent = open ? 'Close' : 'Menu';
+      document.body.classList.toggle('nav-open', open);
       document.body.style.overflow = open ? 'hidden' : '';
     }
 
@@ -240,6 +241,27 @@ document.addEventListener('DOMContentLoaded', function () {
     rail.addEventListener('scroll', syncButtons, { passive: true });
     window.addEventListener('resize', syncButtons);
     syncButtons();
+  }
+
+  // ========================================
+  // BACK TO TOP
+  // ========================================
+  const toTop = document.querySelector('.to-top');
+
+  if (toTop) {
+    function syncToTop() {
+      // Appear only once the hero is behind you, so it never overlaps the
+      // first screen where there is nothing to scroll back to.
+      toTop.classList.toggle('is-visible', window.scrollY > window.innerHeight * 1.1);
+    }
+
+    toTop.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: prefersReducedMotion ? 'auto' : 'smooth' });
+    });
+
+    window.addEventListener('scroll', syncToTop, { passive: true });
+    window.addEventListener('resize', syncToTop);
+    syncToTop();
   }
 
   // ========================================

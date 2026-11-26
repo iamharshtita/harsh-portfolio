@@ -1097,7 +1097,9 @@ button {
   justify-content: space-between;
   gap: 2rem;
   flex-wrap: wrap;
-  padding: 2.25rem var(--gutter);
+  /* Deep bottom padding reserves a landing zone for the fixed back-to-top
+     control, which otherwise covers the right-hand footer links. */
+  padding: 2.25rem var(--gutter) 7rem;
   max-width: var(--max);
   margin: 0 auto;
   border-top: 1px solid var(--rule);
@@ -1127,6 +1129,68 @@ button {
 
 .footer-links a:hover {
   color: var(--accent);
+}
+
+/* ========================================
+   BACK TO TOP
+   ======================================== */
+
+/* Same vocabulary as the other utility controls: a hairline pill on paper,
+   accent on hover. Sits below the header (z-index 100) and above content. */
+.to-top {
+  position: fixed;
+  right: var(--gutter);
+  bottom: var(--gutter);
+  z-index: 90;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  height: 46px;
+  padding: 0 1.1rem 0 0.95rem;
+  border: 1px solid var(--rule);
+  border-radius: 100px;
+  background: var(--paper);
+  color: var(--ink-mid);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+
+  /* Hidden until scrolled past the first screen */
+  opacity: 0;
+  transform: translateY(10px);
+  pointer-events: none;
+  transition: opacity var(--t-base), transform var(--t-base),
+              color var(--t-fast), border-color var(--t-fast);
+}
+
+.to-top.is-visible {
+  opacity: 1;
+  transform: none;
+  pointer-events: auto;
+}
+
+.to-top:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+.to-top svg {
+  width: 17px;
+  height: 17px;
+  transition: transform var(--t-fast);
+}
+
+.to-top:hover svg {
+  transform: translateY(-2px);
+}
+
+/* The mobile drawer covers the top of the screen; the button would float
+   over it with nothing to return to. */
+body.nav-open .to-top {
+  opacity: 0;
+  pointer-events: none;
 }
 
 /* ========================================
@@ -1401,6 +1465,23 @@ button {
 
   .moment {
     flex-basis: 260px;
+  }
+
+  .site-footer {
+    padding-bottom: 5.5rem;
+  }
+
+  /* Icon only, so it takes less of a narrow screen */
+  .to-top {
+    height: 44px;
+    width: 44px;
+    padding: 0;
+    justify-content: center;
+    border-radius: 50%;
+  }
+
+  .to-top-label {
+    display: none;
   }
 
   .lightbox-prev,
