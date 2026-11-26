@@ -655,11 +655,21 @@ button {
   margin-bottom: 0.5rem;
 }
 
+/* The list owns the column track sizes and each row inherits them with
+   subgrid. Previously every row was its own grid, so 1fr and auto resolved
+   per row and the differing tag widths pushed each description to a
+   different x position. */
+.minor-list {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr) max-content 40px;
+  column-gap: 2rem;
+}
+
 .minor-row {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr) auto 40px;
+  grid-column: 1 / -1;
+  grid-template-columns: subgrid;
   align-items: center;
-  gap: 2rem;
   padding: 1.6rem 0;
   border-bottom: 1px solid var(--rule);
 }
@@ -1329,8 +1339,12 @@ body.nav-open .to-top {
     grid-template-columns: 180px minmax(0, 1fr);
   }
 
+  .minor-list {
+    grid-template-columns: minmax(0, 1fr) max-content 40px;
+  }
+
   .minor-row {
-    grid-template-columns: minmax(0, 1fr) auto 40px;
+    row-gap: 0.5rem;
   }
 
   .minor-desc {
@@ -1453,9 +1467,13 @@ body.nav-open .to-top {
     gap: 1rem;
   }
 
-  .minor-row {
+  .minor-list {
     grid-template-columns: minmax(0, 1fr) 40px;
-    gap: 0.75rem 1.5rem;
+    column-gap: 1.5rem;
+  }
+
+  .minor-row {
+    row-gap: 0.75rem;
     align-items: start;
   }
 
