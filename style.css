@@ -17,9 +17,10 @@
   --rule-strong: #C9C9C5;
 
   /* Single accent, reserved for actions: content links, the primary CTA and
-     focus rings. In-page navigation stays ink. 6.70:1 on white. */
-  --accent: #1D4ED8;
-  --accent-strong: #1E3A8A;
+     focus rings, plus the rotating word in the hero. In-page navigation
+     stays ink. Electric blue, 5.75:1 on white; hover shade 7.94:1. */
+  --accent: #0052FF;
+  --accent-strong: #0040D0;
 
   /* Typography */
   --font-display: 'Space Grotesk', system-ui, sans-serif;
